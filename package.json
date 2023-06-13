@@ -3,19 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_ENV=development next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "cross-env NODE_ENV=production next start",
+    "lint": "next lint",
+    "format": "prettier --write . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@headlessui/react": "1.7.15",
+    "@heroicons/react": "2.0.18",
+    "@material-tailwind/react": "^2.0.1",
+    "@tanstack/match-sorter-utils": "^8.8.4",
+    "@tanstack/react-table": "^8.9.2",
     "autoprefixer": "10.4.14",
-    "eslint": "8.42.0",
-    "eslint-config-next": "13.4.4",
+    "classnames": "^2.3.2",
+    "cookie": "0.5.0",
+    "cross-env": "^7.0.3",
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "7.44.3",
+    "sweetalert2": "^11.4.8",
     "tailwindcss": "3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.8"
   }
 }

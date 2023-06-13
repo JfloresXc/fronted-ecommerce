@@ -1,0 +1,57 @@
+import { useContext } from 'react'
+import { useRouter } from 'next/navigation'
+
+import { AuthContext } from '@/contexts/AuthContext'
+import { useError } from '@/hooks/useError'
+
+const HEADERS = { 'Content-Type': 'application/json' }
+
+export const useAuth = () => {
+  const { tryCatch } = useError()
+  const { jwt, setJwt } = useContext(AuthContext)
+  const router = useRouter()
+
+  const login = async ({ email, password }) => {
+    tryCatch(
+      async () => {
+        const URL = `/api/auth/login`
+        const response = await fetch(URL, {
+          method: 'POST',
+          headers: HEADERS,
+          body: JSON.stringify({ email, password }),
+        })
+        const data = await response.json()
+        return data
+      },
+      ({ token = '' }) => {
+        setJwt(token)
+        router.push('/account')
+      }
+    )
+  }
+
+  const logout = async () => {
+    tryCatch(
+      async () => {
+        const URL = `/api/auth/logout`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      () => {
+        window.localStorage.clear()
+        setJwt('')
+        router.push('/login')
+      }
+    )
+  }
+
+  return {
+    isLogged: Boolean(jwt),
+    jwt,
+    setJwt,
+    login,
+    logout,
+    HEADERS: { ...HEADERS, Authorization: `Bearer ${jwt}` },
+  }
+}
