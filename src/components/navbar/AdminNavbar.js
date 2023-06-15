@@ -3,7 +3,6 @@
 import { Disclosure } from '@headlessui/react'
 import Brand from '@/components/brand'
 import DropdownUser from '../dropdown/DropdownUser'
-import Sidebar from '../sidebar'
 
 export default function ClientNavbar() {
   return (
@@ -12,7 +11,6 @@ export default function ClientNavbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 py-1">
             <div className="relative flex h-20 items-center justify-between">
-              <Sidebar />
               <div className="max-w-[110px] text-center">
                 <Brand />
               </div>

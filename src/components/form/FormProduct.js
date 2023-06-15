@@ -28,34 +28,6 @@ function InputGroup({ handleChange, name, label, placeholder, type = 'text' }) {
   )
 }
 
-// function InputGroup ({ handleChange, name, label, placeholder, type = 'text' }) {
-//   const inputId = useId(1, 'input-group-')
-
-//   return <>
-//     <div className="form-group">
-//       <label
-//           className="col-form-label-sm"
-//           htmlFor={inputId}
-//       >
-//         {label}
-//       </label>
-//       <input
-//           type={type}
-//           id={inputId}
-//           name={name}
-//           onChange={handleChange}
-//           className="form-control form-control-sm"
-//           placeholder={placeholder}
-//       />
-//     </div>
-//     <style jsx>{`
-//       .form-group{
-//             flex: 1 1 300px;
-//       }
-//     `}</style>
-//   </>
-// }
-
 export default function FormProduct() {
   const [credentials, setCredentials] = useState({
     email: '',

@@ -64,12 +64,12 @@ const COLUMNS_DEFAULT = [
     enableSorting: true,
   },
   {
-    accessorKey: 'actions',
+    accessorKey: 'id',
     header: 'Acciones',
     cell: (info) => {
       return (
         <div className="space-x-2">
-          <Dropdown />
+          <Dropdown linkEdit={`account/roles/e${info.getValue()}`} />
         </div>
       )
     },
@@ -94,7 +94,7 @@ const DebouncedInput = ({ value: keyWord, onChange, ...props }) => {
     }, 500)
 
     return () => clearTimeout(timeout)
-  }, [setValue, 500])
+  }, [value, 100])
 
   return (
     <input
@@ -110,6 +110,7 @@ const DataTable = ({
   subtitle = 'Not subtitle',
   data = defaultData,
   columns = COLUMNS_DEFAULT,
+  linkRefActionAdd = '/account/roles/a',
 }) => {
   const [globalFilter, setGlobalFilter] = useState('')
   const [sorting, setSorting] = useState([])
@@ -151,7 +152,7 @@ const DataTable = ({
   })
 
   return (
-    <div className="w-full rounded overflow-hidden shadow-lg px-6 py-6 bg-white">
+    <div className="w-full rounded overflow-hidden  bg-white">
       <div className="mb-6 flex flex-col justify-between gap-8 md:flex-row md:items-center">
         <div className="">
           <h5 className="text-2xl text-blue-gray">{title}</h5>
@@ -169,7 +170,7 @@ const DataTable = ({
             <MagnifyingGlassIcon className="w-4 h-4 absolute top-3 left-2.5" />
           </div>
         </div>
-        <Button label={'Agregar'} location="/account/roles/23" />
+        <Button label={'Agregar'} location={linkRefActionAdd} />
       </div>
       <div className="overflow-auto h-[500px]">
         <table className=" w-full min-w-max table-auto text-left">

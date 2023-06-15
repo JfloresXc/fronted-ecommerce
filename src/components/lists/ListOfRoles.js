@@ -41,10 +41,7 @@ const COLUMNS = [
       const id = info.getValue()
       return (
         <div className="space-x-2">
-          <Dropdown
-            linkEdit={`/account/roles/${id}`}
-            linkDelete={`/account/roles/${id}`}
-          />
+          <Dropdown linkEdit={`/account/roles/e${id}`} />
         </div>
       )
     },
@@ -59,6 +56,7 @@ export default function ListOfRoles({ roles = [] }) {
       subtitle="Lista de roles de usuario registrados en el sistema"
       columns={COLUMNS}
       data={roles}
+      linkRefActionAdd="/account/roles/a"
     />
   )
 }

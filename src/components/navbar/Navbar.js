@@ -9,11 +9,4 @@ export default function Navbar() {
 
   if (isLogged) return <AdminNavbar />
   return <ClientNavbar />
-
-  // return (
-  //   <>
-  //     <ClientNavbar />
-  //     <AdminNavbar />
-  //   </>
-  // )
 }

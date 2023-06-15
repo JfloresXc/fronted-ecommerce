@@ -16,7 +16,7 @@ export default function Input({
 
   return (
     <>
-      <div>
+      <div className={`mb-3`}>
         <label
           htmlFor={inputId}
           className={`block font-normal text-sm leading-none mb-3 cursor-pointer text-${colorValidation}-500`}
@@ -27,7 +27,7 @@ export default function Input({
           type={type}
           id={inputId}
           className={`px-5 text-heading outline-none w-full h-[52px] ltr:pl-5 rtl:pr-5 md:ltr:pl-6 md:rtl:pr-6 ltr:pr-14 rtl:pl-14 md:ltr:pr-16 md:rtl:pl-16 bg-brand-light text-sm lg:text-15px rounded-md transition-all duration-200 border border-${
-            isInvalid ? colorValidation + '-500' : 'gray-200'
+            typeError ? colorValidation + '-500' : 'gray-200'
           }`}
           {...validations}
         />
