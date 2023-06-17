@@ -10,7 +10,7 @@ export function useLocalStorage(key, initalState) {
   }, [])
 
   useEffect(() => {
-    if (state.length > 0) {
+    if (state) {
       localStorage.setItem(key, JSON.stringify(state))
     }
   }, [state])

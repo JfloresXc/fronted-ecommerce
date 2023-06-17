@@ -90,10 +90,10 @@ export default function TablePermissions() {
   }
 
   return (
-    <div class="relative overflow-x-auto sm:rounded-lg">
+    <div className="relative overflow-x-auto sm:rounded-lg">
       <form onSubmit={handleSubmit(handleSubmitOwn)}>
         <div className="flex justify-between align-center mb-5">
-          <h2 class="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
+          <h2 className="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
             Permisos
           </h2>
           <Button label={'Guardar'} type="submit" />
@@ -106,16 +106,16 @@ export default function TablePermissions() {
             }),
           }}
         />
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" className="px-6 py-3">
                 Módulo
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" className="px-6 py-3">
                 Detalle/Acción
               </th>
-              <th scope="col" class="px-6 py-3"></th>
+              <th scope="col" className="px-6 py-3"></th>
             </tr>
           </thead>
           <tbody>
@@ -123,32 +123,32 @@ export default function TablePermissions() {
               ({ id, name: moduleName, code: moduleCode, actions }) => (
                 <tr
                   key={id}
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     {moduleName}
                   </th>
-                  <td class="px-6 py-4">
-                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                  <td className="px-6 py-4">
+                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                       <tbody>
                         {actions?.map(
                           ({ id, name: actionName, code: actionCode }) => {
                             return (
                               <tr
                                 key={id}
-                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                               >
                                 <th
                                   scope="row"
-                                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                                 >
                                   {actionName} {moduleName}
                                 </th>
-                                <td class="px-6 py-4">
-                                  <div class="flex items-center justify-center">
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center justify-center">
                                     <ToggleInput
                                       validations={{
                                         ...register(

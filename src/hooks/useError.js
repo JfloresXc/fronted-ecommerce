@@ -7,10 +7,12 @@ export const useError = () => {
   const tryCatch = async (firstCallback, secondCallback = null) => {
     showLoading()
     try {
-      const response = await firstCallback()
+      let response = await firstCallback()
       hideLoading()
       const { isError } = handleError(response)
-      if (!isError) secondCallback(response)
+      if (!isError) {
+        response = await secondCallback(response)
+      }
       return response
     } catch (error) {
       hideLoading()

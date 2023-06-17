@@ -84,7 +84,9 @@ export default function FormLogin() {
             </label>
           </div>
         </div>
-        <Button label={'Iniciar sesión'} type="submit" />
+        <div className="flex justify-center align-center">
+          <Button label={'Iniciar sesión'} type="submit" width="200px" />
+        </div>
       </form>
     </div>
   )

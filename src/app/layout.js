@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import ButtonWhatsApp from '@/components/button/ButtonWhatsApp'
 import AuthContext from '@/contexts/AuthContext'
+import LoadingContext from '@/contexts/LoadingContext'
 import { Portal } from '@/components/portal/Portal'
 import Spinner from '@/components/spinner'
 import Navbar from '@/components/navbar/Navbar'
@@ -39,9 +40,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthContext>
-          <Content>{children}</Content>
-        </AuthContext>
+        <LoadingContext>
+          <AuthContext>
+            <Content>{children}</Content>
+          </AuthContext>
+        </LoadingContext>
       </body>
     </html>
   )

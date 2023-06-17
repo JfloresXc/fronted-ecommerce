@@ -1,16 +1,16 @@
 'use client'
 
 import { useLocalStorage } from '@/hooks/useLocaleStorage'
-import React, { useState } from 'react'
+import React from 'react'
 
 const Context = React.createContext({})
 
 export default function AuthContext({ children }) {
   const [jwt, setJwt] = useLocalStorage('jwt', '')
-  const [loading, setLoading] = useState(false)
+  const [user, setUser] = useLocalStorage('user', {})
 
   return (
-    <Context.Provider value={{ jwt, setJwt, loading, setLoading }}>
+    <Context.Provider value={{ jwt, setJwt, user, setUser }}>
       {children}
     </Context.Provider>
   )

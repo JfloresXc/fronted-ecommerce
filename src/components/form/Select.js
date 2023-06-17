@@ -2,17 +2,15 @@
 
 export default function Select({
   label,
-  widthFlex = '6',
   defaultValue,
   items,
   validations = {},
 }) {
   return (
-    <div className={`w-full lg:w-${widthFlex}/12 px-4`}>
+    <div className={`w-full`}>
       <div className="relative w-full mb-3">
         <label
-          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-          htmlFor="grid-password"
+          className={`block font-normal text-sm leading-none mb-3 cursor-pointer text-gray-500`}
         >
           {label}
         </label>

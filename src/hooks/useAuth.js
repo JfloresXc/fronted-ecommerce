@@ -8,7 +8,7 @@ const HEADERS = { 'Content-Type': 'application/json' }
 
 export const useAuth = () => {
   const { tryCatch } = useError()
-  const { jwt, setJwt } = useContext(AuthContext)
+  const { jwt, setJwt, user, setUser } = useContext(AuthContext)
   const router = useRouter()
 
   const login = async ({ email, password }) => {
@@ -23,8 +23,9 @@ export const useAuth = () => {
         const data = await response.json()
         return data
       },
-      ({ token = '' }) => {
+      ({ token = '', user = {} }) => {
         setJwt(token)
+        setUser(user)
         router.push('/account')
       }
     )
@@ -50,6 +51,7 @@ export const useAuth = () => {
     isLogged: Boolean(jwt),
     jwt,
     setJwt,
+    idUser: user?.id,
     login,
     logout,
     HEADERS: { ...HEADERS, Authorization: `Bearer ${jwt}` },

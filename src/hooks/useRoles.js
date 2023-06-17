@@ -1,4 +1,5 @@
 import { useError } from '@/hooks/useError'
+import { setMessageSuccess } from '@/utils/alerts'
 import { useRouter } from 'next/navigation'
 
 export const useRoles = () => {
@@ -60,7 +61,10 @@ export const useRoles = () => {
         const data = await response.json()
         return data
       },
-      () => router.push('/account/roles')
+      () => {
+        setMessageSuccess({ message: '¡Rol agregado!' })
+        router.push('/account/roles')
+      }
     )
   }
 
@@ -79,6 +83,7 @@ export const useRoles = () => {
         return data
       },
       () => {
+        setMessageSuccess({ message: '¡Rol editado!' })
         router.push('/account/roles')
       }
     )

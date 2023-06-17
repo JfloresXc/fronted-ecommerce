@@ -41,7 +41,7 @@ export default function FormRole({ action = 'a', id = '' }) {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(handleSubmitOwn)}>
-      <h2 class="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
+      <h2 className="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
         Datos del rol
       </h2>
       <div className="grid lg:grid-cols-2 gap-5">
@@ -69,7 +69,7 @@ export default function FormRole({ action = 'a', id = '' }) {
       <hr className="mt-6 border-b-1 border-blueGray-300" />
 
       <Button
-        label={`${getNameAction({ action })} Rol`}
+        label={`${getNameAction({ action })}`}
         type="submit"
         full={true}
       />

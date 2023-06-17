@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { AuthContext } from '@/contexts/AuthContext'
+import { LoadingContext } from '@/contexts/LoadingContext'
 
 export const useLoading = () => {
-  const { loading, setLoading } = useContext(AuthContext)
+  const { loading, setLoading } = useContext(LoadingContext)
 
   const showLoading = () => setLoading(true)
 

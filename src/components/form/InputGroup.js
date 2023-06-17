@@ -6,12 +6,14 @@ export default function Input({
   type = 'text',
   errors,
   validations,
+  amountMinLength = 5,
 }) {
   const inputId = useId(1, 'login-email-')
   const typeError = errors[name]?.type
   const isRequired = typeError === 'required'
   const isPatternValid = typeError === 'pattern'
-  const isInvalid = isRequired || isPatternValid
+  const isMinLengthValid = typeError === 'minLength'
+  const isInvalid = isRequired || isPatternValid || isMinLengthValid
   const colorValidation = isInvalid ? 'red' : 'gray'
 
   return (
@@ -40,6 +42,12 @@ export default function Input({
         {isPatternValid && (
           <p className="mt-2 text-xs text-red-500">
             <span className="font-medium">Oops!</span> Ingresa un correo válido
+          </p>
+        )}
+        {isMinLengthValid && (
+          <p className="mt-2 text-xs text-red-500">
+            <span className="font-medium">Oops!</span> Caractéres mínimos es{' '}
+            {amountMinLength}
           </p>
         )}
       </div>
