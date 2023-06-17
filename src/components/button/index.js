@@ -5,7 +5,7 @@ import React from 'react'
 
 const DESIGNS = {
   regular:
-    'max-w-xs text-white bg-primary hover:opacity-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center  hover:bg-secondary text-[13px] md:text-sm lg:text-15px leading-4  w-full sm:w-auto h-11 md:h-[50px] px-5 lg:px-6 py-4 md:py-3.5 lg:py-4',
+    'max-w-xs text-white bg-primary hover:opacity-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center  hover:bg-secondary text-[13px] md:text-sm lg:text-15px leading-4 w-auto h-11 md:h-[50px] px-5 lg:px-6 py-4 md:py-3.5 lg:py-4',
 }
 
 function Button({

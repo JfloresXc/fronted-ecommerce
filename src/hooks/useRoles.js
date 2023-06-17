@@ -19,6 +19,19 @@ export const useRoles = () => {
     )
   }
 
+  const getActivedRoles = async () => {
+    return tryCatch(
+      async () => {
+        const URL = `/api/roles/getAll?state=1`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        return data
+      }
+    )
+  }
   const getOneRole = async ({ id }) => {
     return tryCatch(
       async () => {
@@ -73,6 +86,7 @@ export const useRoles = () => {
 
   return {
     getAllRoles,
+    getActivedRoles,
     getOneRole,
     addNewRole,
     editRole,

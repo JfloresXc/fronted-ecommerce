@@ -1,5 +1,9 @@
-'use client'
+import TablePermissions from '@/components/table/TablePermissions'
 
 export default function Page() {
-  return <h1>Permissions</h1>
+  return (
+    <div>
+      <TablePermissions />
+    </div>
+  )
 }

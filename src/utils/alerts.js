@@ -16,3 +16,19 @@ export const setMessageError = ({ message }) => {
   `,
   })
 }
+
+export const setMessageSuccess = ({ message }) => {
+  Swal.fire({
+    icon: 'success',
+    html: `<h4>${message}</h4>`,
+    timer: 3000,
+    showConfirmButton: false,
+    width: 400,
+    padding: '2em 3em',
+    backdrop: `
+    rgba(129, 233, 121, 0.4)
+    left top
+    no-repeat
+  `,
+  })
+}
