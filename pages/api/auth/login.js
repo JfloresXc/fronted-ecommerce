@@ -8,6 +8,7 @@ export default async function handler(req, res) {
 
   try {
     const url = `${API_URL_SERVER_BACKEND}/auth/signin`
+    console.log(API_URL_SERVER_BACKEND)
     const response = await fetch(url, {
       method: 'POST',
       headers: {
