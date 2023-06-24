@@ -20,6 +20,16 @@ export const ROUTES = [
     href: '/account/users',
   },
   {
+    title: 'Categorías',
+    icon: <Bars3BottomLeftIcon />,
+    href: '/account/categories',
+  },
+  {
+    title: 'Productos',
+    icon: <Bars3BottomLeftIcon />,
+    href: '/account/products',
+  },
+  {
     title: 'Reestablecer contraseña',
     icon: <Bars3BottomLeftIcon />,
     href: '/account/changepassword',

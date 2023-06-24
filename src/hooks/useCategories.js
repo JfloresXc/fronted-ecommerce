@@ -2,14 +2,14 @@ import { useError } from '@/hooks/useError'
 import { setMessageSuccess } from '@/utils/alerts'
 import { useRouter } from 'next/navigation'
 
-export const useProducts = () => {
+export const useCategories = () => {
   const { tryCatch } = useError()
   const router = useRouter()
 
-  const getAllProducts = async () => {
+  const getAllCategories = async () => {
     return tryCatch(
       async () => {
-        const URL = `/api/products/getAll`
+        const URL = `/api/categories/getAll`
         const response = await fetch(URL)
         const data = await response.json()
         return data
@@ -20,23 +20,10 @@ export const useProducts = () => {
     )
   }
 
-  const getActivedProducts = async () => {
+  const getActivedCategories = async () => {
     return tryCatch(
       async () => {
-        const URL = `/api/products/getAll?state=1`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
-  }
-  const getOneProduct = async ({ id }) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/products/getOne?id=${id}`
+        const URL = `/api/categories/getAll?state=1`
         const response = await fetch(URL)
         const data = await response.json()
         return data
@@ -47,10 +34,24 @@ export const useProducts = () => {
     )
   }
 
-  const addNewProduct = async (body) => {
+  const getOneCategory = async ({ id }) => {
     return tryCatch(
       async () => {
-        const URL = `/api/products/add`
+        const URL = `/api/categories/getOne?id=${id}`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        return data
+      }
+    )
+  }
+
+  const addNewCategory = async (body) => {
+    return tryCatch(
+      async () => {
+        const URL = `/api/categories/add`
         const response = await fetch(URL, {
           method: 'POST',
           headers: {
@@ -62,16 +63,16 @@ export const useProducts = () => {
         return data
       },
       () => {
-        setMessageSuccess({ message: '¡Producto agregado!' })
-        router.push('/account/products')
+        setMessageSuccess({ message: '¡Categoría agregado!' })
+        router.push('/account/categories')
       }
     )
   }
 
-  const editProduct = async (id, body) => {
+  const editCategory = async (id, body) => {
     return tryCatch(
       async () => {
-        const URL = `/api/products/edit?id=${id}`
+        const URL = `/api/categories/edit?id=${id}`
         const response = await fetch(URL, {
           method: 'PUT',
           headers: {
@@ -83,17 +84,17 @@ export const useProducts = () => {
         return data
       },
       () => {
-        setMessageSuccess({ message: '¡Producto editado!' })
-        router.push('/account/products')
+        setMessageSuccess({ message: '¡Categoría editada!' })
+        router.push('/account/categories')
       }
     )
   }
 
   return {
-    getAllProducts,
-    getActivedProducts,
-    getOneProduct,
-    addNewProduct,
-    editProduct,
+    getAllCategories,
+    getActivedCategories,
+    getOneCategory,
+    addNewCategory,
+    editCategory,
   }
 }

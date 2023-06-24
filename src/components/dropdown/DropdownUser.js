@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { RectangleGroupIcon, UserCircleIcon } from '@heroicons/react/24/outline'
+import {
+  HomeIcon,
+  RectangleGroupIcon,
+  UserCircleIcon,
+} from '@heroicons/react/24/outline'
 import ButtonLogout from '../button/ButtonLogout'
+import Link from 'next/link'
 
 function DropdownUser() {
   return (
@@ -25,6 +30,21 @@ function DropdownUser() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 z-100 mt-2 w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="px-1 py-1">
+            <Menu.Item>
+              {({ active }) => (
+                <Link
+                  href={'/account'}
+                  className={`${
+                    active ? 'bg-primary text-white' : 'text-gray-900'
+                  } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                >
+                  <HomeIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                  Home
+                </Link>
+              )}
+            </Menu.Item>
+          </div>
           <div className="px-1 py-1">
             <Menu.Item>
               {({ active }) => (

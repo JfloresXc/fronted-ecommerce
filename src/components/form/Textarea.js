@@ -2,7 +2,7 @@
 
 import { useId } from 'react'
 
-export default function Textareatest({
+export default function Textarea({
   label = 'Not label',
   name,
   errors,
