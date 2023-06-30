@@ -1,4 +1,4 @@
-import Section from '@/components/secction'
+import Section from '@/components/section'
 import Sidebar from '@/components/sidebar/Sidebar'
 import SidebarHidden from '@/components/sidebar/SidebarHidden'
 

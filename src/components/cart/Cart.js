@@ -11,7 +11,7 @@ const products = [
     name: 'Throwback Hip Bag',
     href: '#',
     color: 'Salmon',
-    price: '$90.00',
+    price: 'S/.90.00',
     quantity: 1,
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
@@ -23,7 +23,7 @@ const products = [
     name: 'Medium Stuff Satchel',
     href: '#',
     color: 'Blue',
-    price: '$32.00',
+    price: 'S/.32.00',
     quantity: 1,
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
@@ -35,7 +35,7 @@ const products = [
     name: 'Medium Stuff Satchel',
     href: '#',
     color: 'Blue',
-    price: '$32.00',
+    price: 'S/.32.00',
     quantity: 1,
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
@@ -47,7 +47,7 @@ const products = [
 function ButtonFloat({ showCart }) {
   return (
     <div
-      className="cursor-pointer fixed z-10 top-2/4 right-0 p-3 py-4 bg-[var(--primary)] rounded-l-lg flex flex-col justify-items-center items-center gap-2 transition ease-in-out delay-150 hover:bg-emerald-500"
+      className="cursor-pointer fixed z-10 top-2/4 right-0 p-3 py-4 bg-[var(--primary)] rounded-l-lg flex flex-col justify-items-center items-center gap-2 transition ease-in-out delay-150 bg-emerald-500"
       onClick={showCart}
     >
       <div className="flex gap-1 mb-2">
@@ -55,7 +55,7 @@ function ButtonFloat({ showCart }) {
         <span className="text-white font-semibold text-sm">Tu carrito</span>
       </div>
       <div className="inline-block text-center text-[var(--primary)] w-30 px-3 py-2 bg-white rounded-md focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-        $0.00
+        S/.0.00
       </div>
     </div>
   )
@@ -170,7 +170,7 @@ export default function Cart() {
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <p>Subtotal</p>
-                          <p>$262.00</p>
+                          <p>S./262.00</p>
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500">
                           Shipping and taxes calculated at checkout.

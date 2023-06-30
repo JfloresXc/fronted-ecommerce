@@ -1,6 +1,7 @@
 import { useError } from '@/hooks/useError'
 import { setMessageSuccess } from '@/utils/alerts'
 import { useRouter } from 'next/navigation'
+import { API_URL_SERVER_BACKEND } from '@/settings/envs'
 
 export const useProducts = () => {
   const { tryCatch } = useError()
@@ -33,10 +34,25 @@ export const useProducts = () => {
       }
     )
   }
+
   const getOneProduct = async ({ id }) => {
     return tryCatch(
       async () => {
         const URL = `/api/products/getOne?id=${id}`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        return data
+      }
+    )
+  }
+
+  const getImagesForIdProduct = async ({ idProduct }) => {
+    return tryCatch(
+      async () => {
+        const URL = `/api/products/imagesForIdProduct?id=${idProduct}`
         const response = await fetch(URL)
         const data = await response.json()
         return data
@@ -68,6 +84,27 @@ export const useProducts = () => {
     )
   }
 
+  const addNewImage = async (formData) => {
+    return tryCatch(
+      async () => {
+        const token = localStorage.getItem('jwt')
+        const URL = `${API_URL_SERVER_BACKEND}/product/image`
+        const response = await fetch(URL, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          body: formData,
+        })
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        setMessageSuccess({ message: '¡Imagen agregada!' })
+      }
+    )
+  }
+
   const editProduct = async (id, body) => {
     return tryCatch(
       async () => {
@@ -93,7 +130,9 @@ export const useProducts = () => {
     getAllProducts,
     getActivedProducts,
     getOneProduct,
+    getImagesForIdProduct,
     addNewProduct,
+    addNewImage,
     editProduct,
   }
 }

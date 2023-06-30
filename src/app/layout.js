@@ -3,10 +3,12 @@ import { Inter } from 'next/font/google'
 import ButtonWhatsApp from '@/components/button/ButtonWhatsApp'
 import AuthContext from '@/contexts/AuthContext'
 import LoadingContext from '@/contexts/LoadingContext'
-import { Portal } from '@/components/portal/Portal'
+import CartContext from '@/contexts/CartContext'
+import { PortalLoading } from '@/components/portal/PortalLoading'
 import Spinner from '@/components/spinner'
 import Navbar from '@/components/navbar/Navbar'
 import BannerTop from '@/components/banner/BannerTop'
+import Cart from '@/components/cart/Cart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,13 +26,15 @@ function Content({ children }) {
       </header>
       <main className="min-h-screen bg-white">
         {children}
-        <Portal>
+        <PortalLoading>
           <Spinner />
-        </Portal>
+        </PortalLoading>
       </main>
       <footer className="bg-slate-50">
         <ButtonWhatsApp />
-        <div id="portal"></div>
+        <Cart />
+        <div id="portal-modal" className="z-20"></div>
+        <div id="portal-loading" className="z-30"></div>
       </footer>
     </>
   )
@@ -42,7 +46,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <LoadingContext>
           <AuthContext>
-            <Content>{children}</Content>
+            <CartContext>
+              <Content>{children}</Content>
+            </CartContext>
           </AuthContext>
         </LoadingContext>
       </body>

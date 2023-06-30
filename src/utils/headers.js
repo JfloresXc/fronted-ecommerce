@@ -6,7 +6,11 @@ export const getHeadersFromAPI = (request) => {
     Authorization: `Bearer ${token}`,
   }
 
-  return { headers }
+  const headersWithFile = {
+    Authorization: `Bearer ${token}`,
+  }
+
+  return { headers, headersWithFile }
 }
 
 export const HEADERS_IN_CLIENT = { 'Content-Type': 'application/json' }

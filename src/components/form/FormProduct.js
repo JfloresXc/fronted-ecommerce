@@ -10,6 +10,7 @@ import Toggle from './Toggle'
 import Textarea from './Textarea'
 import Select from './Select'
 import { useCategories } from '@/hooks/useCategories'
+import ModalImages from '../modal/ModalImages'
 
 export default function FormProduct({ action = 'a', id = '' }) {
   const [categories, setCategories] = useState([])
@@ -18,6 +19,7 @@ export default function FormProduct({ action = 'a', id = '' }) {
     handleSubmit,
     formState: { errors },
     setValue,
+    getValues,
   } = useForm({ mode: 'onChange' })
   const { isActionEdit, isActionAdd } = getValidateAction({ action })
   const { addNewProduct, editProduct, getOneProduct } = useProducts()
@@ -70,9 +72,21 @@ export default function FormProduct({ action = 'a', id = '' }) {
   return (
     <>
       <form className="space-y-6" onSubmit={handleSubmit(handleSubmitOwn)}>
-        <h2 className="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
-          Datos del producto
-        </h2>
+        <div className="flex justify-between">
+          <h2 className="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
+            Datos del producto
+          </h2>
+          {isActionEdit && (
+            <ModalImages
+              label="Ver imágenes"
+              titleModal=""
+              product={{
+                name: getValues('name'),
+                idProduct: id,
+              }}
+            />
+          )}
+        </div>
         <div className="grid lg:grid-cols-2 gap-5">
           <InputGroup
             name="name"
@@ -141,6 +155,7 @@ export default function FormProduct({ action = 'a', id = '' }) {
             }}
           />
         </div>
+
         <div className="grid lg:grid-cols-2 gap-5">
           <InputGroup
             name={'discountPercentage'}

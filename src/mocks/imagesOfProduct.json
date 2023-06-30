@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Imagen 1",
+    "url": "https://picsum.photos/100/100",
+    "isPrincipal": true
+  },
+  {
+    "id": 2,
+    "name": "Imagen 2",
+    "url": "https://picsum.photos/200/200"
+  },
+  {
+    "id": 3,
+    "name": "Imagen 3",
+    "url": "https://picsum.photos/400/400"
+  },
+  {
+    "id": 3,
+    "name": "Imagen 3",
+    "url": "https://picsum.photos/400/400"
+  },
+  {
+    "id": 3,
+    "name": "Imagen 3",
+    "url": "https://picsum.photos/400/400"
+  }
+]

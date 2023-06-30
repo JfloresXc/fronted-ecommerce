@@ -1,20 +1,18 @@
 'use client'
 
-import { useLoading } from '@/hooks/useLoading'
 import { useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
-export const Portal = ({ children }) => {
+export const PortalModal = ({ children, handleClose }) => {
   const ref = useRef(null)
-  const { isLoading } = useLoading()
 
   useEffect(() => {
-    ref.current = document.querySelector('#portal')
+    ref.current = document.querySelector('#portal-modal')
   }, [])
 
   return (
     <>
-      {isLoading && ref.current
+      {ref.current
         ? createPortal(<div className="overlay">{children}</div>, ref.current)
         : null}
       <style jsx>{`

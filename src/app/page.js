@@ -1,4 +1,4 @@
-import Section from '@/components/secction'
+import Section from '@/components/section'
 
 export default function Home() {
   return (

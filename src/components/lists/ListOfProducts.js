@@ -62,12 +62,14 @@ const COLUMNS = [
 
 export default function ListOfProducts({ data = [] }) {
   return (
-    <DataTable
-      title="Productos"
-      subtitle="Lista de productos registrados en el sistema"
-      columns={COLUMNS}
-      data={data}
-      linkRefActionAdd="/account/products/a"
-    />
+    <>
+      <DataTable
+        title="Productos"
+        subtitle="Lista de productos registrados en el sistema"
+        columns={COLUMNS}
+        data={data}
+        linkRefActionAdd="/account/products/a"
+      />
+    </>
   )
 }
