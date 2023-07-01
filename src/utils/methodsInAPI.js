@@ -80,4 +80,24 @@ const editOne = async function handler({ request, res, moduleRoute }) {
   }
 }
 
-export { getAll, getOne, addOne, editOne }
+const deleteOne = async function handler({ request, res, moduleRoute }) {
+  try {
+    const { headers } = getHeadersFromAPI(request)
+    const id = request.query.id
+    const body = request.body
+
+    const url = `${API_URL_SERVER_BACKEND}/${moduleRoute}/${id}`
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers,
+      body: JSON.stringify(body),
+    })
+    const data = await response.json()
+
+    res.json(data)
+  } catch (error) {
+    handleErrorWithCause(error, res)
+  }
+}
+
+export { getAll, getOne, addOne, editOne, deleteOne }

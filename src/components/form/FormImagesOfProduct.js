@@ -9,9 +9,10 @@ export default function FormImagesOfProduct({ idProduct }) {
   const {
     register,
     formState: { errors },
+    reset,
   } = useForm({ mode: 'onChange' })
   const [file, setFile] = useState(null)
-  const { addNewImage } = useProducts()
+  const { addOneImage } = useProducts()
 
   const handleSubmitOwn = async () => {
     if (!file) return
@@ -26,7 +27,9 @@ export default function FormImagesOfProduct({ idProduct }) {
     formData.append('size', size)
     formData.append('type', type)
     formData.append('idProduct', idProduct)
-    await addNewImage(formData)
+    addOneImage(formData).then(() => {
+      reset()
+    })
   }
 
   const handleChange = (event) => {

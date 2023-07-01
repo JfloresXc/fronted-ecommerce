@@ -1,12 +1,13 @@
 import React from 'react'
 import FormLogin from '@/components/form/FormLogin'
+import Section from '@/components/section'
 
 export default function LoginContent() {
   return (
     <>
-      <section className="min-h-screen py-10 flex justify-center align-center">
+      <Section>
         <FormLogin />
-      </section>
+      </Section>
     </>
   )
 }

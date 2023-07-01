@@ -72,7 +72,7 @@ export default function ClientNavbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden absolute w-full bg-slate-50 drop-shadow-md">
+          <Disclosure.Panel className="sm:hidden absolute w-full bg-slate-50 shadow">
             <div className="space-y-1 px-2 pb-3 ">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -83,7 +83,7 @@ export default function ClientNavbar() {
                     item.current
                       ? 'bg-primary text-white'
                       : 'text-gray-800 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    'block rounded-md px-3 py-2 text-sm '
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

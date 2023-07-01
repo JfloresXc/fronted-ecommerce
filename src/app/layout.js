@@ -8,7 +8,7 @@ import { PortalLoading } from '@/components/portal/PortalLoading'
 import Spinner from '@/components/spinner'
 import Navbar from '@/components/navbar/Navbar'
 import BannerTop from '@/components/banner/BannerTop'
-import Cart from '@/components/cart/Cart'
+// import Cart from '@/components/cart/Cart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,7 +32,7 @@ function Content({ children }) {
       </main>
       <footer className="bg-slate-50">
         <ButtonWhatsApp />
-        <Cart />
+        {/* <Cart /> */}
         <div id="portal-modal" className="z-20"></div>
         <div id="portal-loading" className="z-30"></div>
       </footer>

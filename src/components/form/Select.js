@@ -2,7 +2,7 @@
 
 export default function Select({
   label,
-  defaultValue,
+  defaultValue = '',
   items,
   validations = {},
 }) {
@@ -16,16 +16,12 @@ export default function Select({
         </label>
         <select
           className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-          {...validations}
           defaultValue={defaultValue}
+          {...validations}
         >
           {items.map((item, index) => {
             return (
-              <option
-                key={index}
-                value={item.id}
-                selected={item.id === defaultValue}
-              >
+              <option key={index} value={item.id}>
                 {item.name}
               </option>
             )

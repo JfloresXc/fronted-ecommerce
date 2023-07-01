@@ -11,7 +11,7 @@ export default function SidebarHidden() {
     <div className="lg:hidden">
       <div className="relative w-full font-body">
         <button
-          className="relative flex items-center w-full p-4 border rounded cursor-pointer text-brand-dark md:p-5 text-left text-right focus:outline-none border-border-base"
+          className="relative flex items-center w-full p-4 border rounded cursor-pointer text-brand-dark md:p-5 text-right focus:outline-none border-border-base"
           id="headlessui-listbox-button-:rt:"
           type="button"
           aria-haspopup="listbox"
