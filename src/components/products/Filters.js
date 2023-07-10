@@ -5,13 +5,13 @@ export default function Filters() {
     <div className="block mb-3">
       <div className="flex items-center justify-between mb-4 -mt-1">
         <h3 className="text-dark text-15px sm:text-base font-semibold">
-          Filters
+          Filtros
         </h3>
         <button
           className="flex-shrink transition duration-150 ease-in text-[13px] focus:outline-none hover:text-dark"
           aria-label="Clear All"
         >
-          Clear All
+          Limpiar Todo
         </button>
       </div>
       <div className="flex flex-wrap -m-1">
