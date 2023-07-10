@@ -5,8 +5,6 @@ import ListOfProducts from '@/components/products/List'
 import SelectFilter from '@/components/products/SelectFilter'
 import { useProductFilters } from '@/hooks/useProductFilters'
 import { useProductsForClient } from '@/hooks/useProductsForClient'
-import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 function SectionFilters() {
