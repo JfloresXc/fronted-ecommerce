@@ -3,9 +3,12 @@
 import Filters from '@/components/products/Filters'
 import ListOfProducts from '@/components/products/List'
 import SelectFilter from '@/components/products/SelectFilter'
+import Pagination from '@/components/pagination/Pagination'
 import { useProductFilters } from '@/hooks/useProductFilters'
 import { useProductsForClient } from '@/hooks/useProductsForClient'
 import { useForm } from 'react-hook-form'
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 function SectionFilters() {
   return (
@@ -18,12 +21,41 @@ function SectionFilters() {
 }
 
 function Page() {
-  const { products } = useProductsForClient()
+  const { products, setProducts, getProductsForSearchParameters } =
+    useProductsForClient()
   const { filterProducts, setFilters } = useProductFilters()
   const filteredProducts = filterProducts(products)
   const { register } = useForm({ mode: 'onChange' })
-  // const searchParams = useSearchParams()
-  // const search = searchParams.get('id')
+  const searchParams = useSearchParams()
+  const searchtext = searchParams.get('search_text')
+  const page = searchParams.get('page')
+  const limit = searchParams.get('limit')
+  const [totalPages, setTotalPages] = useState(0)
+
+  useEffect(() => {
+    getProductsForParameters({
+      searchtext,
+      page,
+      limit,
+    })
+  }, [searchParams])
+
+  const getProductsForParameters = async ({ searchtext, page, limit }) => {
+    const parameters = {
+      searchtext: searchtext ?? '',
+      page: page ?? 1,
+      limit: limit ?? 10,
+    }
+
+    const { products, totalPages } = await getProductsForSearchParameters(
+      parameters
+    )
+
+    setTotalPages(totalPages)
+    setProducts(products)
+
+    return parameters
+  }
 
   const handleChangeMinPrice = (event) => {
     setFilters((prevState) => {
@@ -105,6 +137,9 @@ function Page() {
             </div>
           </div>
           <ListOfProducts products={filteredProducts} />
+          <div className="text-center mt-5">
+            <Pagination totalPages={totalPages} />
+          </div>
         </div>
       </div>
     </div>

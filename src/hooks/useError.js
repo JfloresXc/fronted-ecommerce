@@ -1,14 +1,28 @@
 import { handleError } from '@/utils/error'
 import { useLoading } from './useLoading'
+import { useRouter } from 'next/navigation'
 
 export const useError = () => {
   const { showLoading, hideLoading } = useLoading()
+  const router = useRouter()
+
+  const isTokenError = (name = '') => {
+    return (
+      name === 'TokenExpiredError' ||
+      name === 'JsonWebTokenError' ||
+      name === 'NotBeforeError'
+    )
+  }
 
   const tryCatch = async (firstCallback, secondCallback = null) => {
     showLoading()
     try {
       let response = await firstCallback()
+      const { name } = response
+
       hideLoading()
+      if (isTokenError(name)) router.push('/logout')
+
       const { isError } = handleError(response)
       if (!isError) {
         response = await secondCallback(response)

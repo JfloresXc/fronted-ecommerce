@@ -8,7 +8,9 @@ export default function CardProduct({
   price,
   priceBefore,
   category,
+  images = [],
 }) {
+  const urlImage = images[0]?.url || '/storage/no-image-placeholder.png'
   return (
     <>
       <article
@@ -18,7 +20,7 @@ export default function CardProduct({
         <div className="relative shrink-0">
           <div className="overflow-hidden mx-auto w-full sm:w-[180px] h-[180px] md:w-[200px] md:h-[200px] transition duration-200 ease-in-out transform group-hover:scale-105 relative">
             <Image
-              src="/storage/sarten.webp"
+              src={urlImage}
               alt="Producto"
               width={750}
               height={500}
