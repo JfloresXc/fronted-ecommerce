@@ -8,7 +8,7 @@ import { useProductFilters } from '@/hooks/useProductFilters'
 import { useProductsForClient } from '@/hooks/useProductsForClient'
 import { useForm } from 'react-hook-form'
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 function SectionFilters() {
   return (
@@ -21,7 +21,7 @@ function SectionFilters() {
 }
 
 function Page() {
-  const { products, setProducts, getProductsForSearchParameters } =
+  const { products, totalPages, getProductsForParameters } =
     useProductsForClient()
   const { filterProducts, setFilters } = useProductFilters()
   const filteredProducts = filterProducts(products)
@@ -30,7 +30,6 @@ function Page() {
   const searchtext = searchParams.get('search_text')
   const page = searchParams.get('page')
   const limit = searchParams.get('limit')
-  const [totalPages, setTotalPages] = useState(0)
 
   useEffect(() => {
     getProductsForParameters({
@@ -39,23 +38,6 @@ function Page() {
       limit,
     })
   }, [searchParams])
-
-  const getProductsForParameters = async ({ searchtext, page, limit }) => {
-    const parameters = {
-      searchtext: searchtext ?? '',
-      page: page ?? 1,
-      limit: limit ?? 10,
-    }
-
-    const { products, totalPages } = await getProductsForSearchParameters(
-      parameters
-    )
-
-    setTotalPages(totalPages)
-    setProducts(products)
-
-    return parameters
-  }
 
   const handleChangeMinPrice = (event) => {
     setFilters((prevState) => {

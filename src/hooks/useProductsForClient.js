@@ -3,7 +3,8 @@ import { ProductsContext } from '@/contexts/ProductsContext'
 import { useError } from './useError'
 
 export function useProductsForClient() {
-  const { products, setProducts } = useContext(ProductsContext)
+  const { products, setProducts, totalPages, setTotalPages } =
+    useContext(ProductsContext)
   const { tryCatch } = useError()
 
   const getProductsForSearchParameters = async ({
@@ -24,5 +25,29 @@ export function useProductsForClient() {
     )
   }
 
-  return { products, setProducts, getProductsForSearchParameters }
+  const getProductsForParameters = async ({ searchtext, page, limit }) => {
+    const parameters = {
+      searchtext: searchtext ?? '',
+      page: page ?? 1,
+      limit: limit ?? 10,
+    }
+
+    const { products, totalPages } = await getProductsForSearchParameters(
+      parameters
+    )
+
+    setTotalPages(totalPages)
+    setProducts(products)
+
+    return { parameters }
+  }
+
+  return {
+    products,
+    setProducts,
+    totalPages,
+    setTotalPages,
+    getProductsForSearchParameters,
+    getProductsForParameters,
+  }
 }

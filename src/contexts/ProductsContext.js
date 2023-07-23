@@ -1,14 +1,17 @@
+'use client'
+
 import React, { useState } from 'react'
-// import data from '@/mocks/products.json'
 
 const Context = React.createContext({})
 
 export default function ProductsContext({ children }) {
-  // const { products: productsData } = data
   const [products, setProducts] = useState([])
+  const [totalPages, setTotalPages] = useState(0)
 
   return (
-    <Context.Provider value={{ products, setProducts }}>
+    <Context.Provider
+      value={{ products, setProducts, totalPages, setTotalPages }}
+    >
       {children}
     </Context.Provider>
   )
