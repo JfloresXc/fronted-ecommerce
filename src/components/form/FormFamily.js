@@ -1,18 +1,15 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { useCategories } from '@/hooks/useCategories'
+import { useFamilies } from '@/hooks/useFamilies'
 import InputGroup from './InputGroup'
 import Button from '../button'
 import Toggle from './Toggle'
 import { getNameAction, getValidateAction } from '@/utils/crud'
 import Textarea from './Textarea'
-import Select from './Select'
-import { useFamilies } from '@/hooks/useFamilies'
 
-export default function FormCategory({ action = 'a', id = '' }) {
-  const [families, setFamilies] = useState([])
+export default function FormFamily({ action = 'a', id = '' }) {
   const {
     register,
     handleSubmit,
@@ -22,39 +19,31 @@ export default function FormCategory({ action = 'a', id = '' }) {
 
   const { isActionEdit, isActionAdd } = getValidateAction({ action })
 
-  const { addNewCategory, editCategory, getOneCategory } = useCategories()
-  const { getActivedFamilies } = useFamilies()
+  const { addNewFamily, editFamily, getOneFamily } = useFamilies()
 
   useEffect(() => {
-    getActivedFamilies().then((familiesData) => {
-      setFamilies(familiesData)
-      if (isActionEdit) getCategory()
-      else if (isActionAdd) {
-        setValue('idFamily', familiesData[0].id)
-        setValue('state', true)
-      }
-    })
+    if (isActionEdit) getFamily()
+    else if (isActionAdd) setValue('state', true)
   }, [])
 
-  const getCategory = async () => {
-    const category = await getOneCategory({ id })
-    setValue('name', category.name)
-    setValue('description', category.description)
-    setValue('state', category.state)
-    setValue('idFamily', category?.family?.id)
+  const getFamily = async () => {
+    const family = await getOneFamily({ id })
+    setValue('name', family.name)
+    setValue('description', family.description)
+    setValue('state', family.state)
   }
 
   const handleSubmitOwn = async (data) => {
     const dataToSend = { ...data, state: data.state ? 1 : 0 }
 
-    if (isActionAdd) await addNewCategory(dataToSend)
-    else if (isActionEdit) await editCategory(id, dataToSend)
+    if (isActionAdd) await addNewFamily(dataToSend)
+    else if (isActionEdit) await editFamily(id, dataToSend)
   }
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(handleSubmitOwn)}>
       <h2 className="text-brand-dark text-base lg:text-lg xl:text-[20px] font-semibold xl:leading-8 mb-5 md:mb-6 lg:mb-7 lg:-mt-1">
-        Datos de la categoría
+        Datos de la familia
       </h2>
       <div className="grid lg:grid-cols-2 gap-5">
         <InputGroup
@@ -75,16 +64,6 @@ export default function FormCategory({ action = 'a', id = '' }) {
         />
       </div>
       <hr className="mt-6 border-b-1 border-blueGray-300" />
-      <div className="grid lg:grid-cols-2 gap-5">
-        <Select
-          label={'Familia'}
-          items={families}
-          validations={{
-            ...register('idFamily'),
-          }}
-        />
-      </div>
-
       <div className="grid w-full">
         <Toggle validations={{ ...register('state') }} />
       </div>

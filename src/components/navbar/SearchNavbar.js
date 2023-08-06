@@ -1,26 +1,22 @@
 'use client'
 
 import { Disclosure } from '@headlessui/react'
-import {
-  Bars3Icon,
-  UserCircleIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { UserCircleIcon } from '@heroicons/react/24/outline'
 import SearchInput from '@/components/form/SearchInput'
 import Brand from '@/components/brand'
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'Ofertas', href: '/about', current: true },
-  { name: 'FAQ', href: '#', current: false },
-  { name: 'Contacto', href: '#', current: false },
+  // { name: 'Ofertas', href: '/about', current: true },
+  // { name: 'FAQ', href: '#', current: false },
+  // { name: 'Contacto', href: '#', current: false },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function ClientNavbar() {
+export default function SearchNavbar() {
   return (
     <Disclosure as="nav" className="bg-slate-50 drop-shadow-sm">
       {({ open }) => (
@@ -29,14 +25,14 @@ export default function ClientNavbar() {
             <div className="relative flex h-20 items-center justify-between ">
               <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
+                {/* <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
-                </Disclosure.Button>
+                </Disclosure.Button> */}
               </div>
               <div className="flex items-center justify-between gap-5 w-full h-16 py-3 top-bar lg:h-auto mx-auto max-w-[1920px]">
                 <div className="max-w-[110px] text-center">

@@ -2,11 +2,17 @@
 
 import { useAuth } from '@/hooks/useAuth'
 import AdminNavbar from './AdminNavbar'
-import ClientNavbar from './ClientNavbar'
+import SearchNavbar from './SearchNavbar'
+import CollectionsNavbar from './CollectionsNavbar'
 
 export default function Navbar() {
   const { isLogged } = useAuth()
 
   if (isLogged) return <AdminNavbar />
-  return <ClientNavbar />
+  return (
+    <>
+      <SearchNavbar />
+      <CollectionsNavbar />
+    </>
+  )
 }

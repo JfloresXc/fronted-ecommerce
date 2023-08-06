@@ -6,7 +6,7 @@ import DropdownUser from '../dropdown/DropdownUser'
 
 export default function ClientNavbar() {
   return (
-    <Disclosure as="nav" className="bg-slate-50 drop-shadow-sm ">
+    <Disclosure as="nav" className="bg-slate-50 drop-shadow-sm z-20 relative">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 py-1">

@@ -20,6 +20,11 @@ export const ROUTES = [
     href: '/account/users',
   },
   {
+    title: 'Familias',
+    icon: <Bars3BottomLeftIcon />,
+    href: '/account/families',
+  },
+  {
     title: 'Categorías',
     icon: <Bars3BottomLeftIcon />,
     href: '/account/categories',
