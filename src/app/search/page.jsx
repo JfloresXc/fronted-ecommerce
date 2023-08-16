@@ -2,17 +2,16 @@
 
 import Filters from '@/components/products/Filters'
 import ListOfProducts from '@/components/products/List'
-import SelectFilter from '@/components/products/SelectFilter'
+import SelectFilterOrder from '@/components/form/SelectFilterOrder'
 import Pagination from '@/components/pagination/Pagination'
-import { useProductFilters } from '@/hooks/useProductFilters'
-import { useProductsForClient } from '@/hooks/useProductsForClient'
-import { useForm } from 'react-hook-form'
-import { useSearchParams } from 'next/navigation'
+import { useFilteredProducts } from '@/hooks/useFilteredProducts'
 import { useEffect } from 'react'
+import Section from '@/components/section'
+import { useParamsFromQuery } from '@/hooks/useParamsFromQuery'
 
 function SectionFilters() {
   return (
-    <div className="sticky hidden h-full lg:pt-4 shrink-0 pr-8 xl:pr-16 lg:block w-80 xl:w-96 top-16">
+    <div className="sticky hidden h-full lg:pt-4 shrink-0 pr-8 xl:pr-16 lg:block w-80 xl:w-96 top-5">
       <div className="space-y-10">
         <Filters />
       </div>
@@ -21,36 +20,25 @@ function SectionFilters() {
 }
 
 function Page() {
-  const { products, totalPages, getProductsForParameters } =
-    useProductsForClient()
-  const { filterProducts, setFilters } = useProductFilters()
-  const filteredProducts = filterProducts(products)
-  const { register } = useForm({ mode: 'onChange' })
-  const searchParams = useSearchParams()
-  const searchtext = searchParams.get('search_text')
-  const page = searchParams.get('page')
-  const limit = searchParams.get('limit')
+  const { totalPages, filteredProducts, getProductsForParameters } =
+    useFilteredProducts()
+  const { searchtext, page, limit, order, searchParams } = useParamsFromQuery()
 
   useEffect(() => {
     getProductsForParameters({
       searchtext,
       page,
       limit,
+      order,
     })
   }, [searchParams])
 
-  const handleChangeMinPrice = (event) => {
-    setFilters((prevState) => {
-      return {
-        ...prevState,
-        minPrice: event.target.value,
-      }
-    })
-  }
-
   return (
-    <div className="mx-auto max-w-[1920px] px-4 md:px-6 lg:px-8 2xl:px-10">
-      <div className="flex pb-16 pt-7 lg:pt-7 lg:pb-20 sm:p-5 lg:py-8 2xl:py-10 lg:px-7 2xl:px-12">
+    <Section>
+      <h1 className="text-2xl ">
+        Resultados de búsqueda: &quot;{searchtext}&quot;
+      </h1>
+      <div className="flex">
         <SectionFilters />
         <div className="w-full">
           <div className="flex flex-col mb-6">
@@ -107,13 +95,7 @@ function Page() {
                   <div className="shrink-0 text-[15px] mr-2 ml-2 text-dark text-opacity-70">
                     Ordenado por:
                   </div>
-                  <SelectFilter
-                    validations={{
-                      ...register('idCategory', {
-                        onChange: handleChangeMinPrice,
-                      }),
-                    }}
-                  />
+                  <SelectFilterOrder slug={`search`} />
                 </div>
               </div>
             </div>
@@ -124,7 +106,7 @@ function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   )
 }
 

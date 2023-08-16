@@ -1,20 +1,23 @@
 import { useContext } from 'react'
-import { ProductsContext } from '@/contexts/ProductsContext'
+import { FilteredProductsContext } from '@/contexts/FilteredProductsContext'
 import { useError } from './useError'
 
-export function useProductsForClient() {
-  const { products, setProducts, totalPages, setTotalPages } =
-    useContext(ProductsContext)
+export function useFilteredProducts() {
   const { tryCatch } = useError()
+
+  const { filteredProducts, setFilteredProducts, totalPages, setTotalPages } =
+    useContext(FilteredProductsContext)
 
   const getProductsForSearchParameters = async ({
     searchtext,
     page,
     limit,
+    order,
+    idcategory = '',
   }) => {
     return tryCatch(
       async () => {
-        const URL = `/api/products/productsForSearchParameters?searchtext=${searchtext}&page=${page}&limit=${limit}`
+        const URL = `/api/products/productsForSearchParameters?searchtext=${searchtext}&page=${page}&limit=${limit}&order=${order}&idcategory=${idcategory}&`
         const response = await fetch(URL)
         const data = await response.json()
         return data
@@ -25,11 +28,19 @@ export function useProductsForClient() {
     )
   }
 
-  const getProductsForParameters = async ({ searchtext, page, limit }) => {
+  const getProductsForParameters = async ({
+    searchtext,
+    page,
+    limit,
+    order,
+    idcategory,
+  }) => {
     const parameters = {
-      searchtext: searchtext ?? '',
-      page: page ?? 1,
-      limit: limit ?? 10,
+      searchtext,
+      page,
+      limit,
+      order,
+      idcategory,
     }
 
     const { products, totalPages } = await getProductsForSearchParameters(
@@ -37,16 +48,14 @@ export function useProductsForClient() {
     )
 
     setTotalPages(totalPages)
-    setProducts(products)
+    setFilteredProducts(products)
 
     return { parameters }
   }
 
   return {
-    products,
-    setProducts,
+    filteredProducts,
     totalPages,
-    setTotalPages,
     getProductsForSearchParameters,
     getProductsForParameters,
   }

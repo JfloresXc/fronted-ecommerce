@@ -1,6 +1,5 @@
-import { useProductFilters } from '@/hooks/useProductFilters'
+import { useFilteredProducts } from '@/hooks/useFilteredProducts'
 import React, { useId } from 'react'
-import Button from '../button'
 
 // function FiltersCategories() {
 //   return (
@@ -56,15 +55,16 @@ import Button from '../button'
 
 export default function Filters() {
   const minPriceFilterId = useId()
-  const { filters, setFilters } = useProductFilters()
+  const { rangePrice } = useFilteredProducts()
 
   const handleChangeMinPrice = (event) => {
-    setFilters((prevState) => {
-      return {
-        ...prevState,
-        minPrice: event.target.value,
-      }
-    })
+    // const maxRange = event.target.value
+    // setFilters((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     rangePrice: maxRange,
+    //   }
+    // })
   }
 
   return (
@@ -83,14 +83,10 @@ export default function Filters() {
                 min="0"
                 max="1000"
                 onChange={handleChangeMinPrice}
-                value={filters.minPrice}
+                value={rangePrice}
                 class="custom-range mb-1"
               />
-              <span>S/{filters.minPrice}.00</span>
-            </div>
-
-            <div className="m-3">
-              <Button label={'Filtrar'} />
+              <span>S/{rangePrice}.00</span>
             </div>
 
             {/* <div className="shrink-0 text-[15px] m-3 flex flex-col">

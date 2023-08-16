@@ -8,7 +8,7 @@ import { PortalLoading } from '@/components/portal/PortalLoading'
 import Spinner from '@/components/spinner'
 import Navbar from '@/components/navbar/Navbar'
 import BannerTop from '@/components/banner/BannerTop'
-import ProductsContext from '@/contexts/ProductsContext'
+import FilteredProductsContext from '@/contexts/FilteredProductsContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,9 +47,9 @@ export default function RootLayout({ children }) {
         <LoadingContext>
           <AuthContext>
             <CartContext>
-              <ProductsContext>
+              <FilteredProductsContext>
                 <Content>{children}</Content>
-              </ProductsContext>
+              </FilteredProductsContext>
             </CartContext>
           </AuthContext>
         </LoadingContext>

@@ -12,7 +12,7 @@ function classNames(...classes) {
 const MenuItem = ({ family: { id, name = '', categories = [] } }) => {
   return (
     <>
-      <div className="relative py-3 mx-3 cursor-pointer menuItem group xl:mx-4">
+      <div className="relative py-3 cursor-pointer menuItem group mr-4">
         <Link
           className="relative inline-flex items-center pt-2 pb-2.5  text-sm font-normal lg:text-15px text-dark group-hover:text-secondary before:absolute before:w-0 before:right-0 left-0 before:bg-primary before:h-[3px] before:transition-all before:duration-300 before:-bottom-[14px] group-hover:before:w-full group-hover:before:right-auto group-hover:before:left-auto "
           href={`/product-family/${id}`}
@@ -63,13 +63,13 @@ export default function CollectionsNavbar() {
   }, [])
 
   return (
-    <Disclosure as="nav" className="bg-slate-100 drop-shadow-sm z-20 relative">
+    <Disclosure as="nav" className="bg-white shadow z-20 relative">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 py-1 z-20 ">
-            <div className="relative flex h-20 items-center justify-between ">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 z-20 ">
+            <div className="relative flex items-center justify-between ">
               <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md px-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -78,7 +78,7 @@ export default function CollectionsNavbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center  gap-5 w-full h-16 py-3 top-bar lg:h-auto mx-auto max-w-[1920px]">
+              <div className="flex items-center  gap-5 w-full py-1 top-bar lg:h-auto mx-auto max-w-[1920px]">
                 {families?.map((family, index) => (
                   <MenuItem family={family} key={index} />
                 ))}
@@ -87,7 +87,7 @@ export default function CollectionsNavbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden absolute w-full bg-slate-50 shadow">
-            <div className="space-y-1 px-2 pb-3 ">
+            <div className="space-y-1 pb-3 ">
               {families?.map((item) => (
                 <Disclosure.Button
                   key={item.name}

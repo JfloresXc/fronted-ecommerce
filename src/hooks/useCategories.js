@@ -48,6 +48,20 @@ export const useCategories = () => {
     )
   }
 
+  const getOneActivedCategory = async ({ id }) => {
+    return tryCatch(
+      async () => {
+        const URL = `/api/categories/getOneActived?id=${id}`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        return data
+      }
+    )
+  }
+
   const addNewCategory = async (body) => {
     return tryCatch(
       async () => {
@@ -94,6 +108,7 @@ export const useCategories = () => {
     getAllCategories,
     getActivedCategories,
     getOneCategory,
+    getOneActivedCategory,
     addNewCategory,
     editCategory,
   }
