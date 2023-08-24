@@ -21,7 +21,7 @@ export default function ButtonWhatsApp() {
 
   return (
     <>
-      <div className="fixed bottom-14 right-6">
+      <div className="fixed bottom-14 right-6 z-50">
         <a
           className="p-2.5"
           target="_blank"

@@ -6,7 +6,7 @@ export default function CardProduct({
   name = '',
   code,
   price,
-  priceBefore,
+  priceBefore = 0,
   category,
   images = [],
 }) {
@@ -46,13 +46,16 @@ export default function CardProduct({
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-3 md:px-4 lg:px-[18px] pb-5 lg:pb-6 lg:pt-1.5 h-full">
+        <div className="flex flex-col px-3 md:px-4 lg:px-[18px] pb-5 lg:pb-6 lg:pt-1.5 mt-3 h-full">
           <div className="mb-1 lg:mb-1.5 -mx-1">
             <span className="inline-block mx-1 text-sm font-semibold sm:text-15px lg:text-base text-brand-dark">
-              S/.{price} - S./40.00
+              S/.{price}
+              <span className="ml-2 text-xs text-gray-600">
+                {priceBefore > 0 && <del>S/.{priceBefore}</del>}
+              </span>
             </span>
           </div>
-          <h2 className="text-brand-dark text-13px sm:text-sm lg:text-15px leading-5 sm:leading-6 mb-1.5">
+          <h2 className="text-brand-dark text-13px sm:text-sm lg:text-15px leading-5 sm:leading-6 mb-1.5 ">
             {name}
           </h2>
           <div className="mt-auto text-13px sm:text-sm">1 Bag</div>
@@ -65,6 +68,7 @@ export default function CardProduct({
           display: flex;
           justify-content: center;
           right: 30px;
+          display: none;
         }
       `}</style>
     </>

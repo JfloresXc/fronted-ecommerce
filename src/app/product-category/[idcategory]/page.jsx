@@ -13,9 +13,14 @@ export default function Page({ params }) {
   })
   const { name } = category
   const { idcategory = '-1' } = params
-  const { totalPages, filteredProducts, getProductsForParameters } =
-    useFilteredProducts()
-  const { searchtext, page, limit, order, searchParams } = useParamsFromQuery()
+  const {
+    totalPages,
+    totalProducts,
+    filteredProducts,
+    getProductsForParameters,
+  } = useFilteredProducts()
+  const { searchtext, page, limit, order, maxprice, searchParams } =
+    useParamsFromQuery()
   const { getOneActivedCategory } = useCategories()
 
   useEffect(() => {
@@ -25,6 +30,7 @@ export default function Page({ params }) {
       limit,
       order,
       idcategory,
+      maxprice,
     })
   }, [searchParams])
 
@@ -40,6 +46,7 @@ export default function Page({ params }) {
       <ListWithFilters
         filteredProducts={filteredProducts}
         totalPages={totalPages}
+        totalProducts={totalProducts}
         slug={`product-category/${idcategory}`}
       />
     </Section>

@@ -25,9 +25,9 @@ const OPTIONS = [
   },
 ]
 
-export default function SelectFilterOrder({ label, slug = 'search' }) {
+export default function SelectFilterOrder({ slug = 'search' }) {
   const router = useRouter()
-  const { searchtext, order: orderFromQuery } = useParamsFromQuery()
+  const { searchtext, order: orderFromQuery, maxprice } = useParamsFromQuery()
   const [order, setOrder] = useState('todos')
 
   useEffect(() => {
@@ -35,7 +35,9 @@ export default function SelectFilterOrder({ label, slug = 'search' }) {
   }, [orderFromQuery])
 
   const redirectToProducts = (order) => {
-    router.push(`/${slug}?search_text=${searchtext}&order=${order}`)
+    router.push(
+      `/${slug}?search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
+    )
   }
 
   const handleChange = (event) => {

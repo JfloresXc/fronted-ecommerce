@@ -2,7 +2,7 @@
 
 import { useFamilies } from '@/hooks/useFamilies'
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 function classNames(...classes) {
@@ -68,7 +68,7 @@ export default function CollectionsNavbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 z-20 ">
             <div className="relative flex items-center justify-between ">
-              <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
+              {/* <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md px-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -77,7 +77,7 @@ export default function CollectionsNavbar() {
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
-              </div>
+              </div> */}
               <div className="flex items-center  gap-5 w-full py-1 top-bar lg:h-auto mx-auto max-w-[1920px]">
                 {families?.map((family, index) => (
                   <MenuItem family={family} key={index} />

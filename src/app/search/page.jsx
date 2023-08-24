@@ -1,34 +1,27 @@
 'use client'
 
-import Filters from '@/components/products/Filters'
-import ListOfProducts from '@/components/products/List'
-import SelectFilterOrder from '@/components/form/SelectFilterOrder'
-import Pagination from '@/components/pagination/Pagination'
 import { useFilteredProducts } from '@/hooks/useFilteredProducts'
 import { useEffect } from 'react'
 import Section from '@/components/section'
 import { useParamsFromQuery } from '@/hooks/useParamsFromQuery'
-
-function SectionFilters() {
-  return (
-    <div className="sticky hidden h-full lg:pt-4 shrink-0 pr-8 xl:pr-16 lg:block w-80 xl:w-96 top-5">
-      <div className="space-y-10">
-        <Filters />
-      </div>
-    </div>
-  )
-}
+import ListWithFilters from '@/components/products/ListWithFilters'
 
 function Page() {
-  const { totalPages, filteredProducts, getProductsForParameters } =
-    useFilteredProducts()
-  const { searchtext, page, limit, order, searchParams } = useParamsFromQuery()
+  const {
+    totalPages,
+    filteredProducts,
+    totalProducts,
+    getProductsForParameters,
+  } = useFilteredProducts()
+  const { searchtext, page, limit, searchParams, maxprice, order } =
+    useParamsFromQuery()
 
   useEffect(() => {
     getProductsForParameters({
       searchtext,
       page,
       limit,
+      maxprice,
       order,
     })
   }, [searchParams])
@@ -38,74 +31,12 @@ function Page() {
       <h1 className="text-2xl ">
         Resultados de búsqueda: &quot;{searchtext}&quot;
       </h1>
-      <div className="flex">
-        <SectionFilters />
-        <div className="w-full">
-          <div className="flex flex-col mb-6">
-            <button className="flex items-center px-4 py-2 text-sm font-semibold transition duration-200 ease-in-out border rounded-md lg:hidden text-brand-dark border-border-base focus:outline-none hover:border-brand hover:text-brand">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18px"
-                height="14px"
-                viewBox="0 0 18 14"
-              >
-                <g
-                  id="Group_36196"
-                  data-name="Group 36196"
-                  transform="translate(-925 -1122.489)"
-                >
-                  <path
-                    id="Path_22590"
-                    data-name="Path 22590"
-                    d="M942.581,1295.564H925.419c-.231,0-.419-.336-.419-.75s.187-.75.419-.75h17.163c.231,0,.419.336.419.75S942.813,1295.564,942.581,1295.564Z"
-                    transform="translate(0 -169.575)"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    id="Path_22591"
-                    data-name="Path 22591"
-                    d="M942.581,1951.5H925.419c-.231,0-.419-.336-.419-.75s.187-.75.419-.75h17.163c.231,0,.419.336.419.75S942.813,1951.5,942.581,1951.5Z"
-                    transform="translate(0 -816.512)"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    id="Path_22593"
-                    data-name="Path 22593"
-                    d="M1163.713,1122.489a2.5,2.5,0,1,0,1.768.732A2.483,2.483,0,0,0,1163.713,1122.489Z"
-                    transform="translate(-233.213)"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    id="Path_22594"
-                    data-name="Path 22594"
-                    d="M2344.886,1779.157a2.5,2.5,0,1,0,.731,1.768A2.488,2.488,0,0,0,2344.886,1779.157Z"
-                    transform="translate(-1405.617 -646.936)"
-                    fill="currentColor"
-                  ></path>
-                </g>
-              </svg>
-              <span className="pl-2.5 pr-2.5">Filtros</span>
-            </button>
-            <div className="flex items-center w-full lg:justify-between ">
-              <div className="shrink-0 text-dark font-medium text-[15px] leading-4 md:mr-6  hidden lg:block mt-0.5">
-                {filteredProducts?.length} Productos encontrados
-              </div>
-              <div className="relative ml-2 mr-2 lg:ml-0 lg:mr-0 min-w-[160px]">
-                <div className="flex items-center">
-                  <div className="shrink-0 text-[15px] mr-2 ml-2 text-dark text-opacity-70">
-                    Ordenado por:
-                  </div>
-                  <SelectFilterOrder slug={`search`} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <ListOfProducts products={filteredProducts} />
-          <div className="text-center mt-5">
-            <Pagination totalPages={totalPages} />
-          </div>
-        </div>
-      </div>
+      <ListWithFilters
+        filteredProducts={filteredProducts}
+        totalPages={totalPages}
+        totalProducts={totalProducts}
+        slug={`search`}
+      />
     </Section>
   )
 }

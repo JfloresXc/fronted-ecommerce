@@ -1,5 +1,6 @@
-import { useFilteredProducts } from '@/hooks/useFilteredProducts'
-import React, { useId } from 'react'
+import React, { useId, useState } from 'react'
+import Button from '../button'
+import { useParamsFromQuery } from '@/hooks/useParamsFromQuery'
 
 // function FiltersCategories() {
 //   return (
@@ -53,12 +54,15 @@ import React, { useId } from 'react'
 //   )
 // }
 
-export default function Filters() {
+const InputRange = ({ slug }) => {
   const minPriceFilterId = useId()
-  const { rangePrice } = useFilteredProducts()
+  const { searchtext, order, maxprice: rangePrice } = useParamsFromQuery()
+  const [maxprice, setMaxprice] = useState(rangePrice)
+  const url = `/${slug}?search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
 
   const handleChangeMinPrice = (event) => {
-    // const maxRange = event.target.value
+    const maxRange = event.target.value
+    setMaxprice(maxRange)
     // setFilters((prevState) => {
     //   return {
     //     ...prevState,
@@ -68,6 +72,29 @@ export default function Filters() {
   }
 
   return (
+    <div className="shrink-0 text-[15px] mr-3 flex flex-col">
+      <label htmlFor={minPriceFilterId}>Por precio: </label>
+      <div className="flex gap-8">
+        <input
+          type="range"
+          id={minPriceFilterId}
+          min="0"
+          max="1000"
+          className="pr-6 accent-primary w-[220px]"
+          onChange={handleChangeMinPrice}
+          value={maxprice}
+          class="mb-1"
+        />
+        <Button label={'Filtrar'} location={url} />
+      </div>
+      <span>S/{maxprice}.00</span>
+    </div>
+  )
+}
+
+export default function Filters({ slug }) {
+  // const { rangePrice = 1000 } = useFilteredProducts()
+  return (
     <>
       <div className="block mb-3">
         <div className="flex items-center justify-between mb-4 -mt-1">
@@ -75,19 +102,7 @@ export default function Filters() {
             <h3 className="text-dark text-15px sm:text-base font-semibold">
               Filtros
             </h3>
-            <div className="shrink-0 text-[15px] m-3 flex flex-col">
-              <label htmlFor={minPriceFilterId}>Por precio: </label>
-              <input
-                type="range"
-                id={minPriceFilterId}
-                min="0"
-                max="1000"
-                onChange={handleChangeMinPrice}
-                value={rangePrice}
-                class="custom-range mb-1"
-              />
-              <span>S/{rangePrice}.00</span>
-            </div>
+            <InputRange slug={slug} />
 
             {/* <div className="shrink-0 text-[15px] m-3 flex flex-col">
               <label htmlFor={categoryFilterId}>Categoría: </label>
