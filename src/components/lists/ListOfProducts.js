@@ -17,10 +17,11 @@ const COLUMNS = [
     cell: (info) => <span>{MONEDA + info.getValue().toFixed(2)}</span>,
   },
   {
-    accessorKey: 'description',
-    header: () => <span>Descripción</span>,
+    accessorKey: 'nameCategory',
+    header: () => <span>Categoría</span>,
     cell: (info) => {
       let text = info.getValue() ?? ''
+      // text = text?.name ?? ''
       text = text.slice(0, 25) + '...'
       return <span>{text}</span>
     },

@@ -15,7 +15,7 @@ export function useFilteredProducts() {
     setTotalProducts,
   } = useContext(FilteredProductsContext)
 
-  const getProductsForSearchParameters = async ({
+  const getProductsForSearchFetch = async ({
     searchtext,
     page,
     limit,
@@ -36,12 +36,33 @@ export function useFilteredProducts() {
     )
   }
 
-  const getProductsForParameters = async ({
+  const getProductsForFamilyFetch = async ({
+    page,
+    limit,
+    order,
+    idfamily,
+    maxprice,
+  }) => {
+    return tryCatch(
+      async () => {
+        const URL = `/api/products/productsForFamily?page=${page}&limit=${limit}&order=${order}&idfamily=${idfamily}&maxprice=${maxprice}`
+        const response = await fetch(URL)
+        const data = await response.json()
+        return data
+      },
+      (data) => {
+        return data
+      }
+    )
+  }
+
+  const getProductsForSearch = async ({
     searchtext = DEFAULT_PARAMS.searchtext,
     page = DEFAULT_PARAMS.page,
     limit = DEFAULT_PARAMS.limit,
     order = DEFAULT_PARAMS.order,
     idcategory = DEFAULT_PARAMS.idcategory,
+    idfamily = DEFAULT_PARAMS.idfamily,
     maxprice = DEFAULT_PARAMS.maxprice,
   }) => {
     const parameters = {
@@ -51,22 +72,47 @@ export function useFilteredProducts() {
       order,
       idcategory,
       maxprice,
+      idfamily,
     }
 
     const { products, totalPages, totalProducts } =
-      await getProductsForSearchParameters(parameters)
-
+      await getProductsForSearchFetch(parameters)
     setTotalPages(totalPages)
     setFilteredProducts(products)
     setTotalProducts(totalProducts)
+
     return { parameters }
+  }
+
+  const getProductsForFamily = async ({
+    page = DEFAULT_PARAMS.page,
+    limit = DEFAULT_PARAMS.limit,
+    order = DEFAULT_PARAMS.order,
+    idfamily = DEFAULT_PARAMS.idfamily,
+    maxprice = DEFAULT_PARAMS.maxprice,
+  }) => {
+    const parameters = {
+      page,
+      limit,
+      order,
+      maxprice,
+      idfamily,
+    }
+
+    const { products, totalPages, totalProducts } =
+      await getProductsForFamilyFetch(parameters)
+    setTotalPages(totalPages)
+    setFilteredProducts(products)
+    setTotalProducts(totalProducts)
+
+    return { products, totalPages, totalProducts }
   }
 
   return {
     filteredProducts,
     totalPages,
     totalProducts,
-    getProductsForSearchParameters,
-    getProductsForParameters,
+    getProductsForFamily,
+    getProductsForSearch,
   }
 }

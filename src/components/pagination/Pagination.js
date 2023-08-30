@@ -15,7 +15,8 @@ function ButtonPagination({ url, children, classes = '', isDisabled = false }) {
         ) : (
           <span
             href={url}
-            className={`flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-gray-100 border border-gray-300 ${classes} cursor-default`}
+            className={`flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-400
+            bg-gray-200 border border-gray-300 ${classes} cursor-default`}
           >
             {children}
           </span>
@@ -61,8 +62,8 @@ export default function Pagination({ totalPages = 0, slug = 'search' }) {
             <li key={index}>
               <Link
                 href={url}
-                className={`flex items-center justify-center px-3 h-8 leading-tight text-gray-500 ${
-                  index + 1 === page ? 'bg-gray-200' : 'bg-white'
+                className={`flex items-center justify-center px-3 h-8 leading-tight text-black ${
+                  index + 1 === page ? 'bg-gray-100 ' : 'bg-white'
                 } border border-gray-300 hover:bg-gray-100 hover:text-gray-700`}
               >
                 {index + 1}

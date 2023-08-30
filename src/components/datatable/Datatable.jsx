@@ -152,28 +152,29 @@ const DataTable = ({
   })
 
   return (
-    <div className="w-full rounded overflow-hidden  bg-white">
+    <div className="w-full rounded overflow-hidden bg-white">
       <div className="mb-6 flex flex-col justify-between gap-8 md:flex-row md:items-center">
         <div className="">
           <h5 className="text-2xl text-blue-gray">{title}</h5>
           <h6 className="mt-1 font-normal">{subtitle}</h6>
         </div>
-        <div className="relative">
-          <div className="w-full md:w-72">
-            <DebouncedInput
-              type="text"
-              value={globalFilter ?? ''}
-              onChange={(value) => setGlobalFilter(String(value))}
-              className="py-2 pr-3 pl-8 text-gray-600 border rounded outline-primary"
-              placeholder="Buscar..."
-            />
-            <MagnifyingGlassIcon className="w-4 h-4 absolute top-3 left-2.5" />
-          </div>
-        </div>
+
         <Button label={'Agregar'} location={linkRefActionAdd} />
       </div>
+      <div className="mb-3">
+        <div className="relative">
+          <DebouncedInput
+            type="text"
+            value={globalFilter ?? ''}
+            onChange={(value) => setGlobalFilter(String(value))}
+            className="py-2 pr-3 pl-8 pb-3 text-gray-600 border rounded outline-primary w-full"
+            placeholder="Buscar..."
+          />
+          <MagnifyingGlassIcon className="w-4 h-4 absolute top-3 left-2.5" />
+        </div>
+      </div>
       <div className="overflow-auto h-[500px]">
-        <table className=" w-full min-w-max table-auto text-left">
+        <table className="w-full min-w-max table-auto text-left">
           <thead>
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>

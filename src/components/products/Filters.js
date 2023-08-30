@@ -80,10 +80,9 @@ const InputRange = ({ slug }) => {
           id={minPriceFilterId}
           min="0"
           max="1000"
-          className="pr-6 accent-primary w-[220px]"
+          className="pr-6 accent-primary w-[220px] mb-1"
           onChange={handleChangeMinPrice}
           value={maxprice}
-          class="mb-1"
         />
         <Button label={'Filtrar'} location={url} />
       </div>

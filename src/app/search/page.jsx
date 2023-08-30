@@ -7,17 +7,13 @@ import { useParamsFromQuery } from '@/hooks/useParamsFromQuery'
 import ListWithFilters from '@/components/products/ListWithFilters'
 
 function Page() {
-  const {
-    totalPages,
-    filteredProducts,
-    totalProducts,
-    getProductsForParameters,
-  } = useFilteredProducts()
+  const { totalPages, filteredProducts, totalProducts, getProductsForSearch } =
+    useFilteredProducts()
   const { searchtext, page, limit, searchParams, maxprice, order } =
     useParamsFromQuery()
 
   useEffect(() => {
-    getProductsForParameters({
+    getProductsForSearch({
       searchtext,
       page,
       limit,
@@ -28,7 +24,7 @@ function Page() {
 
   return (
     <Section>
-      <h1 className="text-2xl ">
+      <h1 className="lg:text-2xl md:text-xl">
         Resultados de búsqueda: &quot;{searchtext}&quot;
       </h1>
       <ListWithFilters

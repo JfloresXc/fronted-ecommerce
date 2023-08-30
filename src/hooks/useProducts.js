@@ -15,7 +15,11 @@ export const useProducts = () => {
         return data
       },
       (data) => {
-        return data
+        const newData = data.map((item) => ({
+          ...item,
+          nameCategory: item?.category?.name ?? '',
+        }))
+        return newData
       }
     )
   }

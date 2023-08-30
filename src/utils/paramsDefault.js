@@ -5,4 +5,5 @@ export const DEFAULT_PARAMS = {
   searchtext: '',
   maxprice: 10000,
   idcategory: '',
+  idfamily: '',
 }

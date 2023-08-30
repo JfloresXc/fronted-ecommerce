@@ -29,9 +29,9 @@ export default function ListWithFilters({
             <div className="shrink-0 text-dark font-medium text-[15px] leading-4 md:mr-6  hidden lg:block mt-0.5">
               {totalProducts} Productos encontrados
             </div>
-            <div className="relative ml-2 mr-2 lg:ml-0 lg:mr-0 min-w-[160px]">
+            <div className="relative mr-2 lg:ml-0 lg:mr-0 min-w-[160px]">
               <div className="flex items-center">
-                <div className="shrink-0 text-[15px] mr-2 ml-2 text-dark text-opacity-70">
+                <div className="shrink-0 text-[15px] mr-2 text-dark text-opacity-70">
                   Ordenado por:
                 </div>
                 <SelectFilterOrder slug={slug} />
@@ -41,7 +41,13 @@ export default function ListWithFilters({
         </div>
         <ListOfProducts products={filteredProducts} />
         <div className="text-center mt-5">
-          <Pagination totalPages={totalPages} slug={slug} />
+          {totalProducts === 0 ? (
+            <p className="text-2xl font-semibold text-gray-500">
+              No se encontraron productos
+            </p>
+          ) : (
+            <Pagination totalPages={totalPages} slug={slug} />
+          )}
         </div>
       </div>
     </div>
