@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { AddIcon, CheckCircleIcon } from '../icons'
+import Link from 'next/link'
 
 export default function CardProduct({
   id,
@@ -13,9 +14,9 @@ export default function CardProduct({
   const urlImage = images[0]?.url || '/storage/no-image-placeholder.png'
   return (
     <>
-      <article
+      <Link
+        href={'/product-detail/' + id}
         className="flex flex-col shadow group overflow-hidden rounded-md cursor-pointer transition-all duration-300 shadow-card hover:shadow-cardHover relative h-full"
-        title="Fresh Express Iceberg Garden Salad Blend"
       >
         <div className="relative shrink-0">
           <div className="overflow-hidden mx-auto w-full sm:w-[180px] h-[180px] md:w-[200px] md:h-[200px] transition duration-200 ease-in-out transform group-hover:scale-105 relative">
@@ -60,7 +61,7 @@ export default function CardProduct({
           </h2>
           <div className="mt-auto text-13px sm:text-sm">1 Bag</div>
         </div>
-      </article>
+      </Link>
       <style jsx>{`
         .product-count-button-position {
           position: absolute;
