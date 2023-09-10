@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { TrashIcon } from '../icons'
+import { DEFAULT_PARAMS } from '@/utils/paramsDefault'
+const { urlImgDefault } = DEFAULT_PARAMS
 
 export default function CardImage({
   isPreview = true,
   isPrincipal = false,
-  url = '/storage/icon-image-not-found.jpg',
+  url = urlImgDefault,
   fileName,
   deleteImage,
 }) {
