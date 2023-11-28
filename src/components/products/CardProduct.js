@@ -1,8 +1,40 @@
 import Image from 'next/image'
-import { AddIcon, CheckCircleIcon } from '../icons'
+import { AddIcon, RestIcon } from '../icons'
 import Link from 'next/link'
+import { useCart } from '@/hooks/useCart'
+import React from 'react'
 
-export default function CardProduct({
+function CartValueForm({
+  quantity,
+  handleClickAddProductToCart,
+  handleClickRestProductToCart,
+}) {
+  return (
+    <div class="block  bg-gray-300 rounded text-white">
+      <div class="flex items-center justify-between  overflow-hidden shrink-0 md:h-8  rounded-3xl w-30 h-10">
+        <button
+          class="inline-flex items-center justify-center w-8 h-8 text-4xl  bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none z-10"
+          onClick={handleClickRestProductToCart}
+        >
+          <span class="sr-only">button-minus</span>
+          <RestIcon />
+        </button>
+        <span class="font-semibold text-brand-dark flex items-center justify-center h-full transition-colors duration-250 ease-in-out cursor-default shrink-0 text-sm md:text-base w-6">
+          {quantity}
+        </span>
+        <button
+          class="inline-flex items-center justify-center w-8 h-8 text-4xl  bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none z-10"
+          onClick={handleClickAddProductToCart}
+        >
+          <span class="sr-only">button-plus</span>
+          <AddIcon />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+function CardProduct({
   id,
   name = '',
   code,
@@ -12,6 +44,19 @@ export default function CardProduct({
   images = [],
 }) {
   const urlImage = images[0]?.url || '/storage/no-image-placeholder.png'
+
+  const { addToCart, restToCart, findProduct } = useCart()
+
+  const handleClickAddProductToCart = (event) => {
+    event.preventDefault()
+    addToCart({ id, name, price, urlImage })
+  }
+
+  const handleClickRestProductToCart = (event) => {
+    event.preventDefault()
+    restToCart({ id, name, price, urlImage })
+  }
+
   return (
     <>
       <Link
@@ -29,21 +74,30 @@ export default function CardProduct({
             />
           </div>
           <div className="w-full h-full absolute top-0 left-4 pt-2.5 md:pt-3.5 px-3 md:px-4 lg:px-[18px] z-10 -mx-0.5 sm:-mx-1">
-            <div className="block product-count-button-position">
+            {/* <div className="block product-count-button-position">
               <button
                 className="inline-flex items-center justify-center w-8 h-8 text-4xl rounded-full bg-primary hover:bg-secondary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none"
                 aria-label="Count Button"
               >
                 <CheckCircleIcon />
               </button>
-            </div>
+            </div> */}
             <div className="block product-count-button-position">
-              <button
-                className="inline-flex items-center justify-center w-8 h-8 text-4xl rounded-full bg-primary hover:bg-secondary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none"
-                aria-label="Count Button"
-              >
-                <AddIcon />
-              </button>
+              {findProduct(id) <= 0 ? (
+                <button
+                  className="inline-flex items-center justify-center w-8 h-8 text-4xl rounded-full bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none relative z-2"
+                  onClick={handleClickAddProductToCart}
+                  type="button"
+                >
+                  <AddIcon />
+                </button>
+              ) : (
+                <CartValueForm
+                  quantity={findProduct(id)}
+                  handleClickAddProductToCart={handleClickAddProductToCart}
+                  handleClickRestProductToCart={handleClickRestProductToCart}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -65,13 +119,14 @@ export default function CardProduct({
       <style jsx>{`
         .product-count-button-position {
           position: absolute;
-          bottom: 0.75rem;
+          bottom: -1.3rem;
           display: flex;
           justify-content: center;
           right: 30px;
-          display: none;
         }
       `}</style>
     </>
   )
 }
+
+export default React.memo(CardProduct)

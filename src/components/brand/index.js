@@ -6,13 +6,12 @@ export default function Brand({ size = 200 }) {
     <>
       <Link href="/">
         <Image
+          src="/storage/logoDiomedic.jpg"
           alt="BoroBazar"
-          loading="eager"
           width="200"
-          height="30"
-          decoding="async"
-          data-nimg="1"
-          src="https://borobazar.vercel.app/_next/static/media/logo.026129ac.svg"
+          height="200"
+          className="brand"
+          quality={75}
         />
       </Link>
     </>

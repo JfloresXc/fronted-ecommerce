@@ -43,7 +43,7 @@ export default function CartContext({ children }) {
     dispatch({
       type: 'CART_REMOVE',
       payload: {
-        idProduct,
+        id: idProduct,
       },
     })
   }

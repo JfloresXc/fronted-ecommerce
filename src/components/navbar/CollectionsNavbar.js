@@ -60,7 +60,7 @@ export default function CollectionsNavbar() {
   }, [])
 
   return (
-    <Disclosure as="nav" className="bg-white shadow z-20 relative">
+    <Disclosure as="nav" className="bg-white shadow z-9 relative">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 z-20 ">

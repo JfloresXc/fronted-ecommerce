@@ -11,7 +11,30 @@ export function useCart() {
   const addToCart = (product) => {
     addOrRestToCart({ product, isAdd: true })
   }
+
   const restToCart = (product) => addOrRestToCart({ product, isAdd: false })
 
-  return { products, addToCart, restToCart, removeOfCart }
+  const findProduct = (idProduct) => {
+    const findedProduct = products?.find((product) => product.id === idProduct)
+    const quantity = findedProduct?.quantity || 0
+    return quantity
+  }
+
+  const getTotal = () => {
+    let total = 0
+    products.forEach((product) => {
+      total += product.price * product.quantity
+    })
+
+    return total
+  }
+
+  return {
+    products,
+    addToCart,
+    restToCart,
+    removeOfCart,
+    findProduct,
+    getTotal,
+  }
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Section from '@/components/section'
 import useProductDetail from '@/hooks/useProductDetail'
 import Galery from '@/components/images/Galery'
+import Button from '@/components/button'
 
 const DEFAULT_PRODUCT = {
   name: '',
@@ -48,6 +49,10 @@ export default function Page({ params }) {
                   </span>
                 </span>
               </div>
+              {/* <button>Hello</button> */}
+            </div>
+            <div className="mt-3">
+              <Button label={'COMPRAR'} width="300px" />
             </div>
           </div>
         </div>
