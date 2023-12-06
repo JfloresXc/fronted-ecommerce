@@ -20,8 +20,8 @@ export default function ModalContent({ isOpen, onClose, title, children }) {
   return ReactDOM.createPortal(
     <>
       <div className="fixed inset-0 flex justify-center m-3 z-50">
-        <div className="fixed inset-0 bg-gray-900 opacity-50"></div>
-        <div className="min-w-[60%] bg-white p-4 rounded-lg shadow-lg z-10 relative z-50 inline-block w-full p-4 overflow-y-scroll align-middle transition-all transform md:w-auto md:p-6 xl:p-8 opacity-100 scale-100">
+        <div className="fixed inset-0 bg-gray-900 opacity-50 z-20"></div>
+        <div className="min-w-[60%] bg-white p-4 rounded-lg shadow-lg relative z-20 inline-block w-full overflow-y-scroll align-middle transition-all transform md:w-auto md:p-6 xl:p-8 opacity-100 scale-100">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-medium leading-5">{title}</h2>
             <button
@@ -44,7 +44,7 @@ export default function ModalContent({ isOpen, onClose, title, children }) {
               </svg>
             </button>
           </div>
-          <div>{children}</div>
+          <div className="z-50">{children}</div>
         </div>
       </div>
     </>,

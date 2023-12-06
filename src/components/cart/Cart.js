@@ -5,6 +5,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { useCart } from '@/hooks/useCart'
+import Link from 'next/link'
+import CartValueAddOrRest from './CartValueAddOrRest'
 
 // const products = [
 //   {
@@ -161,7 +163,15 @@ export default function Cart() {
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
                                       <p className="text-gray-500">
-                                        Cantidad {product.quantity}
+                                        <span className="text-xs">
+                                          Cantidad
+                                        </span>
+                                        <CartValueAddOrRest
+                                          id={product.id}
+                                          name={product.name}
+                                          price={product.price}
+                                          urlImage={product.urlImage}
+                                        />
                                       </p>
 
                                       <div className="flex">
@@ -193,12 +203,13 @@ export default function Cart() {
                           Envío calculado al momento de pagar.
                         </p>
                         <div className="mt-6">
-                          <a
-                            href="#"
+                          <Link
+                            href="checkout"
                             className="flex items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-secondary"
+                            onClick={() => setOpen(false)}
                           >
                             Comprar ahora
-                          </a>
+                          </Link>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                           <p>
