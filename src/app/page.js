@@ -1,9 +1,17 @@
 import Section from '@/components/section'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <Section>
-      <h1>Hero</h1>
+      <div className="w-full z-10">
+        <Image
+          src="/storage/farmacia.jpg" // Ruta relativa a /public
+          alt="Hero Image"
+          width={1200}
+          height={300}
+        />
+      </div>
     </Section>
   )
 }

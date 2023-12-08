@@ -1,6 +1,12 @@
 import React from 'react'
-import Section from '../section'
+import BannerDelivery from '../banner/BannerDelivery'
+import BannerFooter from '../banner/BannerFooter'
 
 export default function Footer() {
-  return <Section>Hola amigo Diomedic 😊🧰</Section>
+  return (
+    <footer>
+      <BannerDelivery />
+      <BannerFooter />
+    </footer>
+  )
 }
