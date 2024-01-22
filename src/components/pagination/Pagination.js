@@ -31,7 +31,7 @@ export default function Pagination({ totalPages = 0, slug = 'search' }) {
   const { searchtext, order, maxprice, page = 1 } = useParamsFromQuery()
 
   const getUrl = ({ page = 1 }) => {
-    return `/${slug}?page=${page}&search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
+    return `${slug}?page=${page}&search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
   }
 
   const firstUrl = getUrl({ page: 1 })

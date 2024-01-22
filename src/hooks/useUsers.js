@@ -72,7 +72,7 @@ export const useUsers = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Usuario agregado!' })
-        router.push('/account/users')
+        router.push('/admin/users')
       }
     )
   }
@@ -93,7 +93,7 @@ export const useUsers = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Usuario editado!' })
-        router.push('/account/users')
+        router.push('/admin/users')
       }
     )
   }
@@ -114,7 +114,7 @@ export const useUsers = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Contraseña reestablecida!' })
-        router.push('/account/users')
+        router.push('/admin/users')
       }
     )
   }

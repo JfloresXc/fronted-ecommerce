@@ -34,9 +34,11 @@ export default function FormOrder() {
     <>
       <form className="w-full" onSubmit={handleSubmit(handleSubmitOwn)}>
         <div className="flex justify-between">
-          <h2 className="text-lg font-medium pb-6">Mis datos</h2>
+          <h2 className="text-lg font-medium pb-6">
+            ¿Hacia dónde enviamos tu pedido?
+          </h2>
         </div>
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-16">
           <InputGroup
             name="nameClient"
             errors={errors}
@@ -59,7 +61,7 @@ export default function FormOrder() {
             }}
           />
         </div>
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-16">
           <InputGroup
             name={'department'}
             errors={errors}
@@ -81,7 +83,7 @@ export default function FormOrder() {
             }}
           />
         </div>
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-16">
           <InputGroup
             name={'district'}
             errors={errors}
@@ -104,7 +106,9 @@ export default function FormOrder() {
           />
         </div>
 
-        <Button label={`REALIZAR MI PEDIDO 😊🛒`} type="submit" full={true} />
+        <div className="ml-auto flex justify-end">
+          <Button label={`Realizar pedido`} type="submit" />
+        </div>
       </form>
     </>
   )

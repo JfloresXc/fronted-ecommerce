@@ -6,6 +6,7 @@ export function useCart() {
     products = [],
     addOrRestToCart,
     removeOfCart,
+    cleanCart,
   } = useContext(CartContext)
 
   const addToCart = (product) => {
@@ -16,7 +17,7 @@ export function useCart() {
 
   const findProduct = (idProduct) => {
     const findedProduct = products?.find((product) => product.id === idProduct)
-    const quantity = findedProduct?.quantity || 0
+    const quantity = findedProduct?.quantity ?? 0
     return quantity
   }
 
@@ -26,7 +27,7 @@ export function useCart() {
       total += product.price * product.quantity
     })
 
-    return total
+    return parseFloat(total).toFixed(2)
   }
 
   return {
@@ -36,5 +37,6 @@ export function useCart() {
     removeOfCart,
     findProduct,
     getTotal,
+    cleanCart,
   }
 }

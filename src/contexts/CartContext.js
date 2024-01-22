@@ -48,8 +48,17 @@ export default function CartContext({ children }) {
     })
   }
 
+  const cleanCart = () => {
+    dispatch({
+      type: 'CART_CLEAN',
+      payload: {},
+    })
+  }
+
   return (
-    <Context.Provider value={{ products, addOrRestToCart, removeOfCart }}>
+    <Context.Provider
+      value={{ products, addOrRestToCart, removeOfCart, cleanCart }}
+    >
       {children}
     </Context.Provider>
   )

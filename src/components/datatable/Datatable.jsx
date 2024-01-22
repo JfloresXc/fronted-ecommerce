@@ -69,7 +69,7 @@ const COLUMNS_DEFAULT = [
     cell: (info) => {
       return (
         <div className="space-x-2">
-          <Dropdown linkEdit={`account/roles/e${info.getValue()}`} />
+          <Dropdown linkEdit={`admin/roles/e${info.getValue()}`} />
         </div>
       )
     },
@@ -110,7 +110,7 @@ const DataTable = ({
   subtitle = 'Not subtitle',
   data = defaultData,
   columns = COLUMNS_DEFAULT,
-  linkRefActionAdd = '/account/roles/a',
+  linkRefActionAdd = '/admin/roles/a',
 }) => {
   const [globalFilter, setGlobalFilter] = useState('')
   const [sorting, setSorting] = useState([])

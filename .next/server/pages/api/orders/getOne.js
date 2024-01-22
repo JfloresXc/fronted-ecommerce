@@ -18,7 +18,7 @@ async function handler(request, res) {
     return (0,_utils_methodsInAPI__WEBPACK_IMPORTED_MODULE_0__/* .getOne */ .Hd)({
         request,
         res,
-        moduleRoute: "user"
+        moduleRoute: "order"
     });
 }
 

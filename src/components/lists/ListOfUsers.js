@@ -45,7 +45,7 @@ const COLUMNS = [
       const id = info.getValue()
       return (
         <div className="space-x-2">
-          <Dropdown linkEdit={`/account/users/e${id}`} />
+          <Dropdown linkEdit={`/admin/users/e${id}`} />
         </div>
       )
     },
@@ -60,7 +60,7 @@ export default function ListOfUsers({ data = [] }) {
       subtitle="Lista de usuarios registrados en el sistema"
       columns={COLUMNS}
       data={data}
-      linkRefActionAdd="/account/users/a"
+      linkRefActionAdd="/admin/users/a"
     />
   )
 }

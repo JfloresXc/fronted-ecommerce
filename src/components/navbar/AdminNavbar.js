@@ -3,8 +3,9 @@
 import { Disclosure } from '@headlessui/react'
 import Brand from '@/components/brand'
 import DropdownUser from '../dropdown/DropdownUser'
+import Link from 'next/link'
 
-export default function ClientNavbar() {
+export default function AdminNavbar({ isLogin = false }) {
   return (
     <Disclosure as="nav" className="bg-slate-50 drop-shadow-sm z-10 relative">
       {({ open }) => (
@@ -16,7 +17,11 @@ export default function ClientNavbar() {
               </div>
 
               <div className="relative inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-50">
-                <DropdownUser />
+                {!isLogin ? (
+                  <DropdownUser />
+                ) : (
+                  <Link href="store">Ir a Tienda</Link>
+                )}
               </div>
             </div>
           </div>

@@ -78,7 +78,7 @@ export const useCategories = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Categoría agregado!' })
-        router.push('/account/categories')
+        router.push('/admin/categories')
       }
     )
   }
@@ -99,7 +99,7 @@ export const useCategories = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Categoría editada!' })
-        router.push('/account/categories')
+        router.push('/admin/categories')
       }
     )
   }

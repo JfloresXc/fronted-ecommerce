@@ -41,7 +41,7 @@ const COLUMNS = [
       const id = info.getValue()
       return (
         <div className="space-x-2">
-          <Dropdown linkEdit={`/account/families/e${id}`} />
+          <Dropdown linkEdit={`/admin/families/e${id}`} />
         </div>
       )
     },
@@ -56,7 +56,7 @@ export default function ListOfFamilies({ data = [] }) {
       subtitle="Lista de familias registradas en el sistema"
       columns={COLUMNS}
       data={data}
-      linkRefActionAdd="/account/families/a"
+      linkRefActionAdd="/admin/families/a"
     />
   )
 }

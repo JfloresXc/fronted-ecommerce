@@ -26,7 +26,7 @@ export const useAuth = () => {
       ({ token = '', user = {} }) => {
         setJwt(token)
         setUser(user)
-        router.push('/account')
+        router.push('/admin/products')
       }
     )
   }
@@ -42,7 +42,7 @@ export const useAuth = () => {
       () => {
         window.localStorage.clear()
         setJwt('')
-        router.push('/login')
+        router.push('/admin/login')
       }
     )
   }

@@ -18,6 +18,7 @@ export const useProducts = () => {
         const newData = data.map((item) => ({
           ...item,
           nameCategory: item?.category?.name ?? '',
+          price: parseFloat(item?.price).toFixed(2),
         }))
         return newData
       }
@@ -33,7 +34,13 @@ export const useProducts = () => {
         return data
       },
       (data) => {
-        return data
+        const newData = data.map((item) => ({
+          ...item,
+          nameCategory: item?.category?.name ?? '',
+          price: parseFloat(item?.price).toFixed(2),
+        }))
+        console.log(newData)
+        return newData
       }
     )
   }
@@ -82,7 +89,7 @@ export const useProducts = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Producto agregado!' })
-        router.push('/account/products')
+        router.push('/admin/products')
       }
     )
   }
@@ -120,7 +127,7 @@ export const useProducts = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Producto editado!' })
-        router.push('/account/products')
+        router.push('/admin/products')
       }
     )
   }

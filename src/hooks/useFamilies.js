@@ -64,7 +64,7 @@ export const useFamilies = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Familia agregado!' })
-        router.push('/account/families')
+        router.push('/admin/families')
       }
     )
   }
@@ -85,7 +85,7 @@ export const useFamilies = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Familia editada!' })
-        router.push('/account/families')
+        router.push('/admin/families')
       }
     )
   }

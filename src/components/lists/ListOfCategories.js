@@ -41,7 +41,7 @@ const COLUMNS = [
       const id = info.getValue()
       return (
         <div className="space-x-2">
-          <Dropdown linkEdit={`/account/categories/e${id}`} />
+          <Dropdown linkEdit={`/admin/categories/e${id}`} />
         </div>
       )
     },
@@ -56,7 +56,7 @@ export default function ListOfCategories({ data = [] }) {
       subtitle="Lista de categorias registradas en el sistema"
       columns={COLUMNS}
       data={data}
-      linkRefActionAdd="/account/categories/a"
+      linkRefActionAdd="/admin/categories/a"
     />
   )
 }

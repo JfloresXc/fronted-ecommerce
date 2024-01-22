@@ -7,24 +7,24 @@ function ButtonAddOrRest({
   handleClickRestProductToCart,
 }) {
   return (
-    <div class="block  bg-gray-300 rounded-3xl text-white">
-      <div class="flex items-center justify-between  overflow-hidden shrink-0 md:h-8 w-30 h-10">
+    <div className="block bg-gray-300 rounded-3xl text-white">
+      <div className="flex items-center justify-between  overflow-hidden shrink-0 md:h-8 w-30 h-10">
         <button
-          class="inline-flex items-center justify-center w-8 h-8 text-4xl bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none z-10 rounded-3xl"
+          className="inline-flex items-center justify-center w-8 h-8 text-4xl bg-gray-300 hover:bg-secondary lg:w-8 lg:h-8 text-white focus:outline-none focus-visible:outline-none rounded-3xl"
           onClick={handleClickRestProductToCart}
         >
-          <span class="sr-only">button-minus</span>
-          <RestIcon />
+          <span className="sr-only">button-minus</span>
+          <RestIcon className={'w-3 h-3'} />
         </button>
-        <span class="font-semibold text-brand-dark flex items-center justify-center h-full transition-colors duration-250 ease-in-out cursor-default shrink-0 text-sm md:text-base w-6">
+        <span className="font-semibold text-brand-dark flex items-center justify-center h-full transition-colors duration-250 ease-in-out cursor-default shrink-0 text-sm w-6">
           {quantity}
         </span>
         <button
-          class="inline-flex items-center justify-center w-8 h-8 text-4xl  bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none z-10 rounded-3xl"
+          className="inline-flex items-center justify-center w-8 h-8 text-4xl  bg-gray-300 hover:bg-secondary lg:w-8 lg:h-8 text-white focus:outline-none focus-visible:outline-none rounded-3xl"
           onClick={handleClickAddProductToCart}
         >
-          <span class="sr-only">button-plus</span>
-          <AddIcon />
+          <span className="sr-only">button-plus</span>
+          <AddIcon className={'w-3 h-3'} />
         </button>
       </div>
     </div>
@@ -48,11 +48,11 @@ export default function CartValueAddOrRest({ id, name, price, urlImage }) {
     <>
       {findProduct(id) <= 0 ? (
         <button
-          className="inline-flex items-center justify-center w-8 h-8 text-4xl rounded-full bg-gray-300 hover:bg-primary lg:w-10 lg:h-10 text-white focus:outline-none focus-visible:outline-none relative z-2"
+          className="inline-flex items-center justify-center text-4xl rounded-full bg-primary hover:bg-secondary w-8 h-8 text-white focus:outline-none focus-visible:outline-none relative"
           onClick={handleClickAddProductToCart}
           type="button"
         >
-          <AddIcon />
+          <AddIcon className={'w-3 h-3'} />
         </button>
       ) : (
         <ButtonAddOrRest

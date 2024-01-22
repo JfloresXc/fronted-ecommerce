@@ -7,36 +7,36 @@ export const ROUTES = [
   {
     title: 'Permisos',
     icon: <ClipboardDocumentIcon />,
-    href: '/account/permissions',
+    href: '/admin/permissions',
   },
   {
     title: 'Roles',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/roles',
+    href: '/admin/roles',
   },
   {
     title: 'Usuarios',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/users',
+    href: '/admin/users',
   },
   {
     title: 'Familias',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/families',
+    href: '/admin/families',
   },
   {
     title: 'Categorías',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/categories',
+    href: '/admin/categories',
   },
   {
     title: 'Productos',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/products',
+    href: '/admin/products',
   },
   {
     title: 'Reestablecer contraseña',
     icon: <Bars3BottomLeftIcon />,
-    href: '/account/changepassword',
+    href: '/admin/changepassword',
   },
 ]

@@ -14,8 +14,8 @@ module.exports = {
         primary: 'var(--primary)',
       },
       colors: {
-        primary: '#FF8811',
-        secondary: '#F4D06F',
+        primary: '#2C3E50',
+        secondary: '#456482',
         white: '#fff',
         dark: 'rgba(0, 0, 0, 1)',
       },

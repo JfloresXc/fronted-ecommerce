@@ -9,7 +9,7 @@ function CardProduct({ id, name = '', price, priceBefore = 0, images = [] }) {
   return (
     <>
       <Link
-        href={'/product-detail/' + id}
+        href={'/store/product-detail/' + id}
         className="flex flex-col shadow group overflow-hidden rounded-md cursor-pointer transition-all duration-300 shadow-card hover:shadow-cardHover relative h-full"
       >
         <div className="relative shrink-0">
@@ -22,7 +22,7 @@ function CardProduct({ id, name = '', price, priceBefore = 0, images = [] }) {
               quality={75}
             />
           </div>
-          <div className="w-full h-full absolute top-0 left-4 pt-2.5 md:pt-3.5 px-3 md:px-4 lg:px-[18px] z-10 -mx-0.5 sm:-mx-1">
+          <div className="w-full h-full absolute top-0 left-4 pt-2.5 md:pt-3.5 px-3 md:px-4 lg:px-[18px] -mx-0.5 sm:-mx-1">
             <div className="block product-count-button-position">
               <CartValueAddOrRest
                 id={id}

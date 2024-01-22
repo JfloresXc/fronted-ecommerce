@@ -31,7 +31,19 @@ export function useFilteredProducts() {
         return data
       },
       (data) => {
-        return data
+        let mappedProducts = data?.products ?? []
+        mappedProducts = mappedProducts?.map((item) => ({
+          ...item,
+          nameCategory: item?.category?.name ?? '',
+          price: parseFloat(item?.price).toFixed(2),
+        }))
+
+        console.log(mappedProducts)
+        const newObject = {
+          ...data,
+          products: mappedProducts,
+        }
+        return newObject
       }
     )
   }

@@ -14,7 +14,11 @@ const COLUMNS = [
   {
     accessorKey: 'price',
     header: () => <span>Precio</span>,
-    cell: (info) => <span>{MONEDA + info.getValue().toFixed(2)}</span>,
+    cell: (info) => (
+      <span>
+        {MONEDA} {info?.getValue()}
+      </span>
+    ),
   },
   {
     accessorKey: 'nameCategory',
@@ -53,7 +57,7 @@ const COLUMNS = [
       const id = info.getValue()
       return (
         <div className="space-x-2">
-          <Dropdown linkEdit={`/account/products/e${id}`} />
+          <Dropdown linkEdit={`/admin/products/e${id}`} />
         </div>
       )
     },
@@ -69,7 +73,7 @@ export default function ListOfProducts({ data = [] }) {
         subtitle="Lista de productos registrados en el sistema"
         columns={COLUMNS}
         data={data}
-        linkRefActionAdd="/account/products/a"
+        linkRefActionAdd="/admin/products/a"
       />
     </>
   )

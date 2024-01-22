@@ -3,6 +3,7 @@ const DICTIONARY = {
   CART_ADD_OR_REST: 'CART_ADD_OR_REST',
   CART_REMOVE: 'CART_REMOVE',
   CART_UPDATE: 'CART_UPDATE',
+  CART_CLEAN: 'CART_CLEAN',
 }
 
 const reducer = (state, action) => {
@@ -10,6 +11,9 @@ const reducer = (state, action) => {
   switch (type) {
     case DICTIONARY.CART_INIT_STORED: {
       return payload
+    }
+    case DICTIONARY.CART_CLEAN: {
+      return []
     }
     case DICTIONARY.CART_ADD_OR_REST: {
       const { product, isAdd } = payload

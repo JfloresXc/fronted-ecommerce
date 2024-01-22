@@ -42,7 +42,7 @@ export default function FormLogin() {
   }
 
   return (
-    <div className="max-h-min block w-full md:w-1/2 lg:w-[45%] xl:w-[35%] py-6 sm:py-10 px-4 sm:px-8 md:px-6 lg:px-8 xl:px-12 rounded-md flex flex-col justify-center border border-gray-200 mx-auto">
+    <div className="max-h-min block w-full md:w-1/2 lg:w-[45%] xl:w-[35%] py-6 sm:py-10 px-4 sm:px-8 md:px-6 lg:px-8 xl:px-12 rounded-md flex-col justify-center border border-gray-200 mx-auto">
       <HeaderForm />
       <form className="space-y-6" onSubmit={handleSubmit(handleSubmitOwn)}>
         <InputGroup

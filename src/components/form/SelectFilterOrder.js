@@ -25,7 +25,7 @@ const OPTIONS = [
   },
 ]
 
-export default function SelectFilterOrder({ slug = 'search' }) {
+export default function SelectFilterOrder({ slug = '/store/search' }) {
   const router = useRouter()
   const { searchtext, order: orderFromQuery, maxprice } = useParamsFromQuery()
   const [order, setOrder] = useState('todos')
@@ -36,7 +36,7 @@ export default function SelectFilterOrder({ slug = 'search' }) {
 
   const redirectToProducts = (order) => {
     router.push(
-      `/${slug}?search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
+      `${slug}?search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
     )
   }
 

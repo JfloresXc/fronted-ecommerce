@@ -18,24 +18,17 @@ function classNames(...classes) {
 
 export default function SearchNavbar() {
   return (
-    <Disclosure as="nav" className="bg-slate-50 drop-shadow-sm">
+    <Disclosure
+      as="nav"
+      className="bg-slate-50 drop-shadow-sm sticky top-0 z-10
+    "
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-5 py-1 ">
-            <div className="relative flex h-20 items-center justify-between ">
-              <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button */}
-                {/* <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mr-3">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button> */}
-              </div>
-              <div className="flex items-center justify-between gap-5 w-full h-16 py-3 top-bar lg:h-auto mx-auto max-w-[1920px]">
-                <div className="max-w-[110px] text-center">
+            <div className="relative h-16 flex items-center justify-between">
+              <div className="w-full flex items-center justify-between gap-5 h-16 py-3 top-bar lg:h-auto">
+                <div className="max-w-[150px] md:max-w-[160px] w-full text-center">
                   <Brand />
                 </div>
                 <SearchInput />
@@ -57,12 +50,15 @@ export default function SearchNavbar() {
                   </div>
                 </div>
               </div>
-              <div className="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="pr-2 sm:pr-0 sr-only">
                 <Link
                   href="/login"
-                  className="p-1 text-gray-400 hover:text-primary focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="text-base text-gray-400 hover:text-primary 
+                  focus:outline-none 
+                  flex items-center justify-center gap-x-2 min-w-[150px]"
                 >
-                  <UserCircleIcon className="h-8 w-8" aria-hidden="true" />
+                  <UserCircleIcon className="h-6 w-6" aria-hidden="true" />
+                  <span>Iniciar Sesión</span>
                 </Link>
               </div>
             </div>

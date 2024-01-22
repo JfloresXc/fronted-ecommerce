@@ -6,10 +6,10 @@ export default function Brand({ size = 200 }) {
     <>
       <Link href="/">
         <Image
-          src="/storage/logoDiomedic.jpg"
-          alt="BoroBazar"
-          width="200"
-          height="200"
+          src="/storage/socorohome-logo.jpg"
+          alt="Logo Socoro Home"
+          width="300"
+          height="300"
           className="brand"
           quality={75}
         />

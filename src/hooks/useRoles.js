@@ -63,7 +63,7 @@ export const useRoles = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Rol agregado!' })
-        router.push('/account/roles')
+        router.push('/admin/roles')
       }
     )
   }
@@ -84,7 +84,7 @@ export const useRoles = () => {
       },
       () => {
         setMessageSuccess({ message: '¡Rol editado!' })
-        router.push('/account/roles')
+        router.push('/admin/roles')
       }
     )
   }

@@ -72,7 +72,7 @@ const InputRange = ({ slug }) => {
   }
 
   return (
-    <div className="shrink-0 text-[15px] mr-3 flex flex-col">
+    <div className="shrink-0 text-[15px] flex flex-col">
       <label htmlFor={minPriceFilterId}>Por precio: </label>
       <div className="flex gap-8">
         <input
