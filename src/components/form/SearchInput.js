@@ -23,7 +23,7 @@ export default function Search() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-[600px] w-full hidden sm:flex lg:mx-7 transition-all duration-200 ease-in-out"
+      className="sm:max-w-[300px] md:max-w-[400px] lg:max-w-[600px] w-full hidden sm:flex lg:mx-7 transition-all duration-200 ease-in-out"
     >
       <div className="overlay cursor-pointer invisible w-full h-full opacity-0 flex top-0 left-0 right-0 transition-all duration-300 fixed input-focus-overlay-open"></div>
       <div className="relative z-30 flex flex-col justify-center w-full shrink-0">

@@ -9,3 +9,13 @@ export const handleError = (responseInJson) => {
     isError,
   }
 }
+
+export const showErrorIfExist = (responseInJson) => {
+  const { message = 'Error de conexion no mapeado', isError } = responseInJson
+
+  if (isError) setMessageError({ message })
+
+  return {
+    isError,
+  }
+}

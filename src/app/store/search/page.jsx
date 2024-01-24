@@ -31,7 +31,7 @@ function Page() {
         filteredProducts={filteredProducts}
         totalPages={totalPages}
         totalProducts={totalProducts}
-        slug={`store/search`}
+        slug={`/store/search`}
       />
     </Section>
   )

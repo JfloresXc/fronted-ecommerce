@@ -29,7 +29,7 @@ export default function ListWithFilters({
             <div className="shrink-0 text-dark font-medium text-[15px] leading-4 md:mr-6  hidden lg:block mt-0.5">
               {totalProducts} Productos encontrados
             </div>
-            <div className="relative mr-2 lg:ml-0 lg:mr-0 min-w-[160px]">
+            <div className="relative mr-2 lg:ml-0 lg:mr-0 min-w-[160px] my-4">
               <div className="flex items-center">
                 <div className="shrink-0 text-[15px] mr-2 text-dark text-opacity-70">
                   Ordenado por:

@@ -20,7 +20,7 @@ function ButtonFloat({ showCart, total }) {
     <button
       className="
         cursor-pointer fixed top-2/4 right-0 z-10
-        px-3 py-4 rounded-l-lg 
+        px-2 py-3 md:px-3 md:py-4 rounded-l-lg 
         flex flex-col justify-items-center items-center gap-2 
         transition ease-in-out delay-150 
         bg-primary hover:bg-secondary 
@@ -33,8 +33,8 @@ function ButtonFloat({ showCart, total }) {
         <span className="text-white font-semibold text-sm">Carrito</span>
       </div>
       <div
-        className="inline-block text-center text-primary font-semibold px-2 py-2 bg-white focus:ring-4 focus:ring-blue-300 rounded-lg text-xs  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
-        w-[75px]"
+        className="inline-block text-center text-primary font-semibold p-1 md:px-2 md:py-2 bg-white focus:ring-4 focus:ring-blue-300 rounded-lg text-[10px] md:text-xs  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
+        w-[60px] md:w-[75px]"
       >
         S/.{total}
       </div>
@@ -150,7 +150,7 @@ function Cart() {
                                       <div className="flex">
                                         <button
                                           type="button"
-                                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                                          className="font-medium text-green-500 hover:text-indigo-500"
                                           onClick={() =>
                                             removeProduct({ id: product.id })
                                           }
@@ -181,7 +181,7 @@ function Cart() {
                             className="flex items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-secondary"
                             onClick={() => setOpen(false)}
                           >
-                            Comprar ahora
+                            Comprar ahora 🛍️
                           </Link>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
@@ -189,7 +189,7 @@ function Cart() {
                             o{' '}
                             <button
                               type="button"
-                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                              className="font-medium text-green-400 hover:text-indigo-500"
                               onClick={() => setOpen(false)}
                             >
                               Continuar comprando

@@ -27,6 +27,7 @@ export default function FormImagesOfProduct({ idProduct }) {
     formData.append('size', size)
     formData.append('type', type)
     formData.append('idProduct', idProduct)
+
     addOneImage(formData).then(() => {
       reset()
     })

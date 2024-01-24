@@ -7,44 +7,34 @@ import { useError } from '@/hooks/useError'
 const HEADERS = { 'Content-Type': 'application/json' }
 
 export const useAuth = () => {
-  const { tryCatch } = useError()
+  const { handlerFetch } = useError()
   const { jwt, setJwt, user, setUser } = useContext(AuthContext)
   const router = useRouter()
 
   const login = async ({ email, password }) => {
-    tryCatch(
-      async () => {
-        const URL = `/api/auth/login`
-        const response = await fetch(URL, {
-          method: 'POST',
-          headers: HEADERS,
-          body: JSON.stringify({ email, password }),
-        })
-        const data = await response.json()
-        return data
-      },
-      ({ token = '', user = {} }) => {
-        setJwt(token)
-        setUser(user)
-        router.push('/admin/products')
-      }
-    )
+    const URL = `/api/auth/login`
+    const { isError, token } = await handlerFetch({
+      url: URL,
+      method: 'POST',
+      body: { email, password },
+    })
+
+    if (isError) return
+    setJwt(token)
+    setUser(user)
+    router.push('/admin/products')
   }
 
   const logout = async () => {
-    tryCatch(
-      async () => {
-        const URL = `/api/auth/logout`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      () => {
-        window.localStorage.clear()
-        setJwt('')
-        router.push('/admin/login')
-      }
-    )
+    const URL = `/api/auth/logout`
+    const { isError } = await handlerFetch({
+      url: URL,
+    })
+    if (isError) return
+
+    window.localStorage.clear()
+    setJwt('')
+    router.push('/admin/login')
   }
 
   return {

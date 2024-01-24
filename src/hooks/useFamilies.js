@@ -3,91 +3,46 @@ import { setMessageSuccess } from '@/utils/alerts'
 import { useRouter } from 'next/navigation'
 
 export const useFamilies = () => {
-  const { tryCatch } = useError()
+  const { handlerFetch } = useError()
   const router = useRouter()
 
   const getAllFamilies = async () => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/families/getAll`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
+    const url = `/api/families/getAll`
+    const response = await handlerFetch({ url })
+    const { data = [] } = response
+    return data
   }
 
   const getActivedFamilies = async () => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/families/getActivedFamilies`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
+    const url = `/api/families/getActivedFamilies`
+    const response = await handlerFetch({ url })
+    const { data = [] } = response
+    return data
   }
 
   const getOneFamily = async ({ id }) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/families/getOne?id=${id}`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
+    const url = `/api/families/getOne?id=${id}`
+    const response = await handlerFetch({ url })
+    const { data = [] } = response
+    return data
   }
 
   const addNewFamily = async (body) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/families/add`
-        const response = await fetch(URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(body),
-        })
-        const data = await response.json()
-        return data
-      },
-      () => {
-        setMessageSuccess({ message: '¡Familia agregado!' })
-        router.push('/admin/families')
-      }
-    )
+    const url = `/api/families/add`
+    const { isError } = await handlerFetch({ url, body, method: 'POST' })
+    if (isError) return
+
+    setMessageSuccess({ message: '¡Familia agregada!' })
+    router.push('/admin/families')
   }
 
   const editFamily = async (id, body) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/families/edit?id=${id}`
-        const response = await fetch(URL, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(body),
-        })
-        const data = await response.json()
-        return data
-      },
-      () => {
-        setMessageSuccess({ message: '¡Familia editada!' })
-        router.push('/admin/families')
-      }
-    )
+    const url = `/api/families/edit?id=${id}`
+    const { isError } = await handlerFetch({ url, body, method: 'PUT' })
+    if (isError) return
+
+    setMessageSuccess({ message: '¡Familia editada!' })
+    router.push('/admin/families')
   }
 
   return {

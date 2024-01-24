@@ -8,7 +8,7 @@ function BannerTop() {
           <p className="hidden lg:flex text-center text-white text-xs m-0 uppercase font-bold">
             😲 Delivery Lima y Provincia 😲
           </p>
-          <p className="text-center text-white text-xs m-0 uppercase font-bold">
+          <p className="text-center text-green-500 text-xs m-0 uppercase font-bold">
             ✨ Envíos de 24 - 48 horas ✨
           </p>
           <p className="hidden lg:flex text-center text-white text-xs m-0 uppercase font-bold">

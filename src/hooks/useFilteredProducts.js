@@ -4,7 +4,7 @@ import { useError } from './useError'
 import { DEFAULT_PARAMS } from '@/utils/paramsDefault'
 
 export function useFilteredProducts() {
-  const { tryCatch } = useError()
+  const { handlerFetch } = useError()
 
   const {
     filteredProducts,
@@ -23,29 +23,22 @@ export function useFilteredProducts() {
     idcategory,
     maxprice,
   }) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/products/productsForSearchParameters?searchtext=${searchtext}&page=${page}&limit=${limit}&order=${order}&idcategory=${idcategory}&maxprice=${maxprice}`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        let mappedProducts = data?.products ?? []
-        mappedProducts = mappedProducts?.map((item) => ({
-          ...item,
-          nameCategory: item?.category?.name ?? '',
-          price: parseFloat(item?.price).toFixed(2),
-        }))
+    const url = `/api/products/productsForSearchParameters?searchtext=${searchtext}&page=${page}&limit=${limit}&order=${order}&idcategory=${idcategory}&maxprice=${maxprice}`
+    const { isError, data = [] } = await handlerFetch({ url })
+    if (isError) return
 
-        console.log(mappedProducts)
-        const newObject = {
-          ...data,
-          products: mappedProducts,
-        }
-        return newObject
-      }
-    )
+    let mappedProducts = data?.products ?? []
+    mappedProducts = mappedProducts?.map((item) => ({
+      ...item,
+      nameCategory: item?.category?.name ?? '',
+      price: parseFloat(item?.price).toFixed(2),
+    }))
+
+    const newObject = {
+      ...data,
+      products: mappedProducts,
+    }
+    return newObject
   }
 
   const getProductsForFamilyFetch = async ({
@@ -55,17 +48,9 @@ export function useFilteredProducts() {
     idfamily,
     maxprice,
   }) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/products/productsForFamily?page=${page}&limit=${limit}&order=${order}&idfamily=${idfamily}&maxprice=${maxprice}`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
+    const url = `/api/products/productsForFamily?page=${page}&limit=${limit}&order=${order}&idfamily=${idfamily}&maxprice=${maxprice}`
+    const { data = [] } = await handlerFetch({ url })
+    return data
   }
 
   const getProductsForSearch = async ({

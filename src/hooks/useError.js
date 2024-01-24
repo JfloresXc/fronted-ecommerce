@@ -1,4 +1,4 @@
-import { handleError } from '@/utils/error'
+import { handleError, showErrorIfExist } from '@/utils/error'
 import { useLoading } from './useLoading'
 import { useRouter } from 'next/navigation'
 
@@ -12,6 +12,75 @@ export const useError = () => {
       name === 'JsonWebTokenError' ||
       name === 'NotBeforeError'
     )
+  }
+
+  const handlerTryCatch = async (firstCallback) => {
+    showLoading()
+    try {
+      const response = await firstCallback()
+      const { name } = response
+
+      if (isTokenError(name)) {
+        response.message = 'Su sesión ha expirado'
+        showErrorIfExist(response)
+        router.push('/logout')
+      }
+
+      showErrorIfExist(response)
+      return response
+    } catch (error) {
+      showErrorIfExist({ isError: true })
+    } finally {
+      hideLoading()
+    }
+  }
+
+  const handlerFetch = async ({
+    url,
+    method = 'GET',
+    body,
+    isFormData = false,
+  }) => {
+    showLoading()
+    try {
+      let objectToSend = {
+        method,
+        body: body && JSON.stringify(body),
+      }
+
+      if (!isFormData) {
+        objectToSend = {
+          ...objectToSend,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      }
+
+      const response = await fetch(url, objectToSend)
+
+      if (!response.ok) {
+        throw new Error('Error de conexion no mapeado')
+      }
+
+      const responseJson = await response.json()
+      const { name } = responseJson
+
+      if (isTokenError(name)) {
+        responseJson.message = 'Su sesión ha expirado'
+        showErrorIfExist(responseJson)
+        router.push('/logout')
+      }
+
+      showErrorIfExist(responseJson)
+
+      return responseJson
+    } catch (error) {
+      showErrorIfExist({ isError: true })
+      return null
+    } finally {
+      hideLoading()
+    }
   }
 
   const tryCatch = async (firstCallback, secondCallback = null) => {
@@ -74,5 +143,7 @@ export const useError = () => {
     tryCatchReturnResponse,
     tryCatchOnlyActions,
     tryCatch,
+    handlerTryCatch,
+    handlerFetch,
   }
 }

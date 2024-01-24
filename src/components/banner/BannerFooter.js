@@ -1,8 +1,5 @@
+import ListSocialIcons from '@/app/list-social-icons/ListSocialIcons'
 import Brand from '../brand'
-import FacebookIcon from '../icons/Facebook'
-import InstagramIcon from '../icons/Instagram'
-import TwitterIcon from '../icons/Twitter'
-import YoutubeIcon from '../icons/Youtube'
 import Section from '../section'
 
 export default function BannerFooter() {
@@ -19,44 +16,7 @@ export default function BannerFooter() {
               utensilios serán tus mejores cómplices.
             </p>
           </div>
-          <ul className="flex flex-wrap justify-center sm:justify-start gap-x-6">
-            <li className="transition hover:opacity-80">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.facebook.com/redqinc/"
-              >
-                <FacebookIcon />
-              </a>
-            </li>
-            <li className="transition hover:opacity-80">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://twitter.com/redqinc"
-              >
-                <TwitterIcon />
-              </a>
-            </li>
-            <li className="transition hover:opacity-80">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.instagram.com/redqinc/"
-              >
-                <InstagramIcon />
-              </a>
-            </li>
-            <li className="transition hover:opacity-80">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw"
-              >
-                <YoutubeIcon />
-              </a>
-            </li>
-          </ul>
+          <ListSocialIcons />
         </div>
         <div className="pb-3.5 sm:pb-0">
           <h3 className="text-brand-dark text-base lg:text-[17px] lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">

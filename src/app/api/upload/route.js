@@ -5,7 +5,6 @@ export async function POST(request) {
   const file = formData.get('file')
   const ext = file.name.split('.').pop()
   const fileName = file.name + '-' + Date.now() + '.' + ext
-
   const url = `${API_URL_SERVER_BACKEND}/product/image`
   const response = await fetch(url, {
     method: 'POST',

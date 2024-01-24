@@ -47,15 +47,15 @@ export default function SelectFilterOrder({ slug = '/store/search' }) {
 
   return (
     <div className={`w-full`}>
-      <div className="relative w-full mb-3">
+      <div className="relative w-full mr-2 bg-gray-200 ">
         <select
-          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150 sm:w-5 lg:w-[150px]"
+          className="bg-gray-200 px-5 p-2 text-sm focus:outline-none focus:ring ease-linear transition-all duration-150 w-[150px]"
           onChange={handleChange}
           value={order}
         >
           {OPTIONS.map(({ value, label }, index) => {
             return (
-              <option value={value} key={index} className="p-1">
+              <option value={value} key={index}>
                 {label}
               </option>
             )

@@ -54,7 +54,7 @@ export default function Pagination({ totalPages = 0, slug = 'search' }) {
           {'<'}
         </ButtonPagination>
         {pages.map((pageKey, index) => {
-          const url = `/${slug}?page=${
+          const url = `${slug}?page=${
             index + 1
           }&search_text=${searchtext}&order=${order}&maxprice=${maxprice}`
 

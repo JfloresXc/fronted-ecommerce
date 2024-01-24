@@ -1,20 +1,13 @@
 import { useError } from './useError'
 
 export default function useProductDetail() {
-  const { tryCatch } = useError()
+  const { handlerFetch } = useError()
 
   const getOneProductDetail = async ({ id }) => {
-    return tryCatch(
-      async () => {
-        const URL = `/api/products/getOneActived?id=${id}`
-        const response = await fetch(URL)
-        const data = await response.json()
-        return data
-      },
-      (data) => {
-        return data
-      }
-    )
+    const url = `/api/products/getOneActived?id=${id}`
+    const response = await handlerFetch({ url })
+    const { data } = response
+    return data
   }
 
   return { getOneProductDetail }
