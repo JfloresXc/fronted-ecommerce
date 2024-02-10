@@ -20,6 +20,7 @@ function CardProduct({ id, name = '', price, priceBefore = 0, images = [] }) {
               width={750}
               height={500}
               quality={75}
+              blurDataURL="/storage/no-image-placeholder.png"
             />
           </div>
           <div className="w-full h-full absolute top-0 left-4 pt-2.5 md:pt-3.5 px-3 md:px-4 lg:px-[18px] -mx-0.5 sm:-mx-1">

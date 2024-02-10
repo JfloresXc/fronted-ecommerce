@@ -42,7 +42,8 @@ export default function Input({
         )}
         {isPatternValid && (
           <p className="mt-2 text-xs text-red-500">
-            <span className="font-medium">Oops!</span> Ingresa un correo válido
+            <span className="font-medium">Oops!</span>{' '}
+            {errors[name].message || 'Ingresa un correo válido'}
           </p>
         )}
         {isMinLengthValid && (

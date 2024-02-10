@@ -4,7 +4,7 @@ import BannerFooter from '../banner/BannerFooter'
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-4">
+    <footer className="bg-white">
       <BannerDelivery />
       <BannerFooter />
     </footer>

@@ -1,7 +1,7 @@
 import FacebookIcon from '@/components/icons/Facebook'
 import InstagramIcon from '@/components/icons/Instagram'
-import TwitterIcon from '@/components/icons/Twitter'
-import YoutubeIcon from '@/components/icons/Youtube'
+import TiktokIcon from '@/components/icons/Tiktok'
+import WhatsAppIcon from '@/components/icons/WhatsApp'
 import React from 'react'
 
 export default function ListSocialIcons() {
@@ -11,21 +11,25 @@ export default function ListSocialIcons() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.facebook.com/redqinc/"
+          href="https://www.facebook.com/socorohome/"
         >
           <FacebookIcon />
-        </a>
-      </li>
-      <li className="transition hover:opacity-80">
-        <a target="_blank" rel="noreferrer" href="https://twitter.com/redqinc">
-          <TwitterIcon />
         </a>
       </li>
       <li className="transition hover:opacity-80">
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.instagram.com/redqinc/"
+          href="https://www.tiktok.com/@socorohome"
+        >
+          <TiktokIcon />
+        </a>
+      </li>
+      <li className="transition hover:opacity-80">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/socorohome/"
         >
           <InstagramIcon />
         </a>
@@ -34,9 +38,9 @@ export default function ListSocialIcons() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw"
+          href="https://api.whatsapp.com/send?phone=51929068827&text=Hola%20Socoro%20Home%2C%20tengo%20una%20consulta%F0%9F%98%8A"
         >
-          <YoutubeIcon />
+          <WhatsAppIcon />
         </a>
       </li>
     </ul>

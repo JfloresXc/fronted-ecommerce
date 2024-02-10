@@ -8,9 +8,9 @@ import MenuItemCollection from './MenuItemCollection'
 
 import Link from 'next/link'
 const LINKS = [
-  { name: 'Ofertas', href: '/about', current: true },
-  { name: 'FAQ', href: '#', current: false },
-  { name: 'Contacto', href: '#', current: false },
+  // { name: 'Ofertas', href: '/about', current: true },
+  // { name: 'FAQ', href: '#', current: false },
+  { name: 'Contacto', href: '/store/contact', current: false },
 ]
 
 export default function CollectionsNavbar() {

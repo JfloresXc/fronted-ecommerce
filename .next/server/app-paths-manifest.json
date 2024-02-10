@@ -1,5 +1,0 @@
-{
-  "/store/page": "app/store/page.js",
-  "/store/product-category/[idcategory]/page": "app/store/product-category/[idcategory]/page.js",
-  "/store/product-family/[idfamily]/page": "app/store/product-family/[idfamily]/page.js"
-}
