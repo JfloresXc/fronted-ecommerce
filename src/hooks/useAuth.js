@@ -8,22 +8,21 @@ const HEADERS = { 'Content-Type': 'application/json' }
 
 export const useAuth = () => {
   const { handlerFetch } = useError()
-  const { jwt, setJwt, user } = useContext(AuthContext)
+  const { jwt, setJwt, user, setUser } = useContext(AuthContext)
   const router = useRouter()
 
   const login = async ({ email, password }) => {
-    const URL = `/api/user`
-    const data = await handlerFetch({
+    const URL = `/api/auth/login`
+    const { isError, token } = await handlerFetch({
       url: URL,
       method: 'POST',
       body: { email, password },
     })
 
-    console.log(data)
-    // if (isError) return
-    // setJwt(token)
-    // setUser(user)
-    // router.push('/admin/products')
+    if (isError) return
+    setJwt(token)
+    setUser(user)
+    router.push('/admin/products')
   }
 
   const logout = async () => {
