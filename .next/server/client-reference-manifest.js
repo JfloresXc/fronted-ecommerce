@@ -1,9 +1,786 @@
 self.__RSC_MANIFEST={
-  "ssrModuleMapping": {},
+  "ssrModuleMapping": {
+    "(app-client)/./node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "getServerActionDispatcher": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "getServerActionDispatcher",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "urlToUrlWithoutFlightMarker": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/app-router.js",
+        "name": "urlToUrlWithoutFlightMarker",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "ErrorBoundaryHandler": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "ErrorBoundaryHandler",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "ErrorBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/error-boundary.js",
+        "name": "ErrorBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "RedirectErrorBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "RedirectErrorBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "RedirectBoundary": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/redirect-boundary.js",
+        "name": "RedirectBoundary",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "*",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+        "name": "default",
+        "chunks": [
+          "webpack:static/chunks/webpack.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/layout-router.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:static/chunks/app-client-internals.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/contexts/LoadingContext.js": {
+      "*": {
+        "id": "(sc_client)/./src/contexts/LoadingContext.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/contexts/LoadingContext.js",
+        "name": "",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "LoadingContext": {
+        "id": "(sc_client)/./src/contexts/LoadingContext.js",
+        "name": "LoadingContext",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/contexts/LoadingContext.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "defaultHead": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "defaultHead",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/cart/Cart.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/cart/Cart.js",
+        "name": "*",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/cart/Cart.js",
+        "name": "",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/cart/Cart.js",
+        "name": "default",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/icons/Tiktok.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/icons/Tiktok.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/icons/Tiktok.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/icons/Tiktok.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/navbar/CollectionsNavbar.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/navbar/CollectionsNavbar.js",
+        "name": "*",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/navbar/CollectionsNavbar.js",
+        "name": "",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/navbar/CollectionsNavbar.js",
+        "name": "default",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/navbar/SearchNavbar.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/navbar/SearchNavbar.js",
+        "name": "*",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/navbar/SearchNavbar.js",
+        "name": "",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/navbar/SearchNavbar.js",
+        "name": "default",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/portal/PortalLoading.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/portal/PortalLoading.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/portal/PortalLoading.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "PortalLoading": {
+        "id": "(sc_client)/./src/components/portal/PortalLoading.js",
+        "name": "PortalLoading",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/contexts/CartContext.js": {
+      "*": {
+        "id": "(sc_client)/./src/contexts/CartContext.js",
+        "name": "*",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/contexts/CartContext.js",
+        "name": "",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "CartContext": {
+        "id": "(sc_client)/./src/contexts/CartContext.js",
+        "name": "CartContext",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/contexts/CartContext.js",
+        "name": "default",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/contexts/FilteredProductsContext.js": {
+      "*": {
+        "id": "(sc_client)/./src/contexts/FilteredProductsContext.js",
+        "name": "*",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/contexts/FilteredProductsContext.js",
+        "name": "",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "FilteredProductsContext": {
+        "id": "(sc_client)/./src/contexts/FilteredProductsContext.js",
+        "name": "FilteredProductsContext",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/contexts/FilteredProductsContext.js",
+        "name": "default",
+        "chunks": [
+          "app/store/layout:static/chunks/app/store/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/admin/layout.js": {
+      "*": {
+        "id": "(sc_client)/./src/app/admin/layout.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/app/admin/layout.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/app/admin/layout.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "metadata": {
+        "id": "(sc_client)/./src/app/admin/layout.js",
+        "name": "metadata",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/button/ButtonLogout.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/button/ButtonLogout.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/button/ButtonLogout.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/button/ButtonLogout.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/navbar/AdminNavbar.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/navbar/AdminNavbar.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/navbar/AdminNavbar.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/navbar/AdminNavbar.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/sidebar/Routes.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/sidebar/Routes.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/sidebar/Routes.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/sidebar/Routes.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/sidebar/SidebarHidden.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/sidebar/SidebarHidden.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/sidebar/SidebarHidden.js",
+        "name": "",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/sidebar/SidebarHidden.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/layout:static/chunks/app/admin/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/contexts/AuthContext.js": {
+      "*": {
+        "id": "(sc_client)/./src/contexts/AuthContext.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/contexts/AuthContext.js",
+        "name": "",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "AuthContext": {
+        "id": "(sc_client)/./src/contexts/AuthContext.js",
+        "name": "AuthContext",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/contexts/AuthContext.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/button/index.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/button/index.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/button/index.js",
+        "name": "",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/button/index.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/form/FormLogin.js": {
+      "*": {
+        "id": "(sc_client)/./src/components/form/FormLogin.js",
+        "name": "*",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/form/FormLogin.js",
+        "name": "",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./src/components/form/FormLogin.js",
+        "name": "default",
+        "chunks": [
+          "app/admin/login/page:static/chunks/app/admin/login/page.js"
+        ],
+        "async": false
+      }
+    }
+  },
   "edgeSSRModuleMapping": {},
-  "cssFiles": {},
+  "cssFiles": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\layout": [
+      "static/css/app/layout.css"
+    ]
+  },
   "clientModules": {
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -11,7 +788,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -19,7 +796,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\app-router.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\app-router.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
@@ -27,7 +804,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
@@ -35,7 +812,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\app-router.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\app-router.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
@@ -43,7 +820,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
@@ -51,7 +828,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "getServerActionDispatcher",
       "chunks": [
@@ -59,7 +836,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "getServerActionDispatcher",
       "chunks": [
@@ -67,7 +844,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "urlToUrlWithoutFlightMarker",
       "chunks": [
@@ -75,7 +852,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "urlToUrlWithoutFlightMarker",
       "chunks": [
@@ -83,7 +860,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -91,7 +868,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -99,7 +876,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\error-boundary.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\error-boundary.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
@@ -107,7 +884,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
@@ -115,7 +892,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
@@ -123,7 +900,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
@@ -131,7 +908,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundaryHandler",
       "chunks": [
@@ -139,7 +916,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundaryHandler",
       "chunks": [
@@ -147,7 +924,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundary",
       "chunks": [
@@ -155,7 +932,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundary",
       "chunks": [
@@ -163,7 +940,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "*",
       "chunks": [
@@ -171,7 +948,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "*",
       "chunks": [
@@ -179,7 +956,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "",
       "chunks": [
@@ -187,7 +964,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "",
       "chunks": [
@@ -195,7 +972,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "default",
       "chunks": [
@@ -203,7 +980,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "default",
       "chunks": [
@@ -211,7 +988,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectErrorBoundary",
       "chunks": [
@@ -219,7 +996,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectErrorBoundary",
       "chunks": [
@@ -227,7 +1004,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectBoundary",
       "chunks": [
@@ -235,7 +1012,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary": {
       "id": "(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectBoundary",
       "chunks": [
@@ -243,7 +1020,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "*",
       "chunks": [
@@ -251,7 +1028,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "*",
       "chunks": [
@@ -259,7 +1036,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "",
       "chunks": [
@@ -267,7 +1044,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#": {
       "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "",
       "chunks": [
@@ -275,15 +1052,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default": {
-      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
-      "name": "default",
-      "chunks": [
-        "webpack:static/chunks/webpack.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default": {
       "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "default",
       "chunks": [
@@ -291,7 +1060,15 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "*",
       "chunks": [
@@ -299,7 +1076,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "*",
       "chunks": [
@@ -307,7 +1084,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "",
       "chunks": [
@@ -315,7 +1092,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "",
       "chunks": [
@@ -323,7 +1100,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "CacheStates",
       "chunks": [
@@ -331,7 +1108,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "CacheStates",
       "chunks": [
@@ -339,7 +1116,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "AppRouterContext",
       "chunks": [
@@ -347,7 +1124,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "AppRouterContext",
       "chunks": [
@@ -355,7 +1132,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "LayoutRouterContext",
       "chunks": [
@@ -363,7 +1140,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "LayoutRouterContext",
       "chunks": [
@@ -371,7 +1148,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "GlobalLayoutRouterContext",
       "chunks": [
@@ -379,7 +1156,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "GlobalLayoutRouterContext",
       "chunks": [
@@ -387,7 +1164,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "TemplateContext",
       "chunks": [
@@ -395,7 +1172,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "TemplateContext",
       "chunks": [
@@ -403,7 +1180,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "*",
       "chunks": [
@@ -411,7 +1188,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "*",
       "chunks": [
@@ -419,7 +1196,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "",
       "chunks": [
@@ -427,7 +1204,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "",
       "chunks": [
@@ -435,7 +1212,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "SearchParamsContext",
       "chunks": [
@@ -443,7 +1220,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "SearchParamsContext",
       "chunks": [
@@ -451,7 +1228,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "PathnameContext",
       "chunks": [
@@ -459,7 +1236,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "PathnameContext",
       "chunks": [
@@ -467,7 +1244,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "*",
       "chunks": [
@@ -475,7 +1252,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "*",
       "chunks": [
@@ -483,7 +1260,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "",
       "chunks": [
@@ -491,7 +1268,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "",
       "chunks": [
@@ -499,7 +1276,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "ServerInsertedHTMLContext",
       "chunks": [
@@ -507,7 +1284,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "ServerInsertedHTMLContext",
       "chunks": [
@@ -515,7 +1292,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "useServerInsertedHTML",
       "chunks": [
@@ -523,11 +1300,753 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\frontend-ecommerce\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
       "id": "(app-client)/./node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "useServerInsertedHTML",
       "chunks": [
         "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\layout-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\layout-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\globals.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\LoadingContext.js": {
+      "id": "(app-client)/./src/contexts/LoadingContext.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\LoadingContext.js#": {
+      "id": "(app-client)/./src/contexts/LoadingContext.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\LoadingContext.js#LoadingContext": {
+      "id": "(app-client)/./src/contexts/LoadingContext.js",
+      "name": "LoadingContext",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\LoadingContext.js#default": {
+      "id": "(app-client)/./src/contexts/LoadingContext.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\image.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\image.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\image.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\image.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\link.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\link.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\client\\link.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\client\\link.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\head.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js#": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\head.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\shared\\lib\\head.js#defaultHead": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "defaultHead",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js#defaultHead": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "defaultHead",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\cart\\Cart.js": {
+      "id": "(app-client)/./src/components/cart/Cart.js",
+      "name": "*",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\cart\\Cart.js#": {
+      "id": "(app-client)/./src/components/cart/Cart.js",
+      "name": "",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\cart\\Cart.js#default": {
+      "id": "(app-client)/./src/components/cart/Cart.js",
+      "name": "default",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\icons\\Tiktok.js": {
+      "id": "(app-client)/./src/components/icons/Tiktok.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\icons\\Tiktok.js#": {
+      "id": "(app-client)/./src/components/icons/Tiktok.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\icons\\Tiktok.js#default": {
+      "id": "(app-client)/./src/components/icons/Tiktok.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\CollectionsNavbar.js": {
+      "id": "(app-client)/./src/components/navbar/CollectionsNavbar.js",
+      "name": "*",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\CollectionsNavbar.js#": {
+      "id": "(app-client)/./src/components/navbar/CollectionsNavbar.js",
+      "name": "",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\CollectionsNavbar.js#default": {
+      "id": "(app-client)/./src/components/navbar/CollectionsNavbar.js",
+      "name": "default",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\SearchNavbar.js": {
+      "id": "(app-client)/./src/components/navbar/SearchNavbar.js",
+      "name": "*",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\SearchNavbar.js#": {
+      "id": "(app-client)/./src/components/navbar/SearchNavbar.js",
+      "name": "",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\SearchNavbar.js#default": {
+      "id": "(app-client)/./src/components/navbar/SearchNavbar.js",
+      "name": "default",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\portal\\PortalLoading.js": {
+      "id": "(app-client)/./src/components/portal/PortalLoading.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\portal\\PortalLoading.js#": {
+      "id": "(app-client)/./src/components/portal/PortalLoading.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\portal\\PortalLoading.js#PortalLoading": {
+      "id": "(app-client)/./src/components/portal/PortalLoading.js",
+      "name": "PortalLoading",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\CartContext.js": {
+      "id": "(app-client)/./src/contexts/CartContext.js",
+      "name": "*",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\CartContext.js#": {
+      "id": "(app-client)/./src/contexts/CartContext.js",
+      "name": "",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\CartContext.js#CartContext": {
+      "id": "(app-client)/./src/contexts/CartContext.js",
+      "name": "CartContext",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\CartContext.js#default": {
+      "id": "(app-client)/./src/contexts/CartContext.js",
+      "name": "default",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\FilteredProductsContext.js": {
+      "id": "(app-client)/./src/contexts/FilteredProductsContext.js",
+      "name": "*",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\FilteredProductsContext.js#": {
+      "id": "(app-client)/./src/contexts/FilteredProductsContext.js",
+      "name": "",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\FilteredProductsContext.js#FilteredProductsContext": {
+      "id": "(app-client)/./src/contexts/FilteredProductsContext.js",
+      "name": "FilteredProductsContext",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\FilteredProductsContext.js#default": {
+      "id": "(app-client)/./src/contexts/FilteredProductsContext.js",
+      "name": "default",
+      "chunks": [
+        "app/store/layout:static/chunks/app/store/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\admin\\layout.js": {
+      "id": "(app-client)/./src/app/admin/layout.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\admin\\layout.js#": {
+      "id": "(app-client)/./src/app/admin/layout.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\admin\\layout.js#default": {
+      "id": "(app-client)/./src/app/admin/layout.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\app\\admin\\layout.js#metadata": {
+      "id": "(app-client)/./src/app/admin/layout.js",
+      "name": "metadata",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\ButtonLogout.js": {
+      "id": "(app-client)/./src/components/button/ButtonLogout.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\ButtonLogout.js#": {
+      "id": "(app-client)/./src/components/button/ButtonLogout.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\ButtonLogout.js#default": {
+      "id": "(app-client)/./src/components/button/ButtonLogout.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\AdminNavbar.js": {
+      "id": "(app-client)/./src/components/navbar/AdminNavbar.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\AdminNavbar.js#": {
+      "id": "(app-client)/./src/components/navbar/AdminNavbar.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\navbar\\AdminNavbar.js#default": {
+      "id": "(app-client)/./src/components/navbar/AdminNavbar.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\Routes.js": {
+      "id": "(app-client)/./src/components/sidebar/Routes.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\Routes.js#": {
+      "id": "(app-client)/./src/components/sidebar/Routes.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\Routes.js#default": {
+      "id": "(app-client)/./src/components/sidebar/Routes.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\SidebarHidden.js": {
+      "id": "(app-client)/./src/components/sidebar/SidebarHidden.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\SidebarHidden.js#": {
+      "id": "(app-client)/./src/components/sidebar/SidebarHidden.js",
+      "name": "",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\sidebar\\SidebarHidden.js#default": {
+      "id": "(app-client)/./src/components/sidebar/SidebarHidden.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/layout:static/chunks/app/admin/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\AuthContext.js": {
+      "id": "(app-client)/./src/contexts/AuthContext.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\AuthContext.js#": {
+      "id": "(app-client)/./src/contexts/AuthContext.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\AuthContext.js#AuthContext": {
+      "id": "(app-client)/./src/contexts/AuthContext.js",
+      "name": "AuthContext",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\contexts\\AuthContext.js#default": {
+      "id": "(app-client)/./src/contexts/AuthContext.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\index.js": {
+      "id": "(app-client)/./src/components/button/index.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\index.js#": {
+      "id": "(app-client)/./src/components/button/index.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\button\\index.js#default": {
+      "id": "(app-client)/./src/components/button/index.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\form\\FormLogin.js": {
+      "id": "(app-client)/./src/components/form/FormLogin.js",
+      "name": "*",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\form\\FormLogin.js#": {
+      "id": "(app-client)/./src/components/form/FormLogin.js",
+      "name": "",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\mesol\\Documents\\lenguajes\\mundo html\\proyectos\\react\\ecommerce\\fronted-ecommerce-supabase\\src\\components\\form\\FormLogin.js#default": {
+      "id": "(app-client)/./src/components/form/FormLogin.js",
+      "name": "default",
+      "chunks": [
+        "app/admin/login/page:static/chunks/app/admin/login/page.js"
       ],
       "async": false
     }

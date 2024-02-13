@@ -13,6 +13,7 @@
     "@headlessui/react": "1.7.15",
     "@heroicons/react": "2.0.18",
     "@material-tailwind/react": "^2.0.1",
+    "@supabase/supabase-js": "^2.39.3",
     "@tanstack/match-sorter-utils": "^8.8.4",
     "@tanstack/react-table": "^8.9.2",
     "autoprefixer": "10.4.14",
